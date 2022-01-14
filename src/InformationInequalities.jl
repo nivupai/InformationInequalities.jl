@@ -4,7 +4,6 @@ using Plots
 using LinearAlgebra
 using Graphs
 using GraphRecipes
-using Reduce
 using LaTeXStrings
 # Write your package code here.
 

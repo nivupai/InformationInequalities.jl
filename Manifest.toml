@@ -5,17 +5,6 @@ git-tree-sha1 = "574baf8110975760d391c710b6341da1afa48d8c"
 uuid = "a4c015fc-c6ff-483c-b24f-f7ea428134e9"
 version = "0.0.1"
 
-[[AbstractLattices]]
-git-tree-sha1 = "f35684b7349da49fcc8a9e520e30e45dbb077166"
-uuid = "398f06c4-4d28-53ec-89ca-5b2656b7603d"
-version = "0.2.1"
-
-[[AbstractTensors]]
-deps = ["AbstractLattices", "LinearAlgebra", "Random"]
-git-tree-sha1 = "2e2dc50d12a8a0c0a0aba63a4d76aeebfcf710de"
-uuid = "a8e43f4a-99b7-5565-8bf1-0165161caaea"
-version = "0.6.7"
-
 [[AbstractTrees]]
 git-tree-sha1 = "03e0550477d86222521d254b741d470ba17ea0b5"
 uuid = "1520ce14-60c1-5f80-bbc7-55ef81b5835c"
@@ -269,12 +258,6 @@ deps = ["Artifacts", "Bzip2_jll", "Expat_jll", "FreeType2_jll", "JLLWrappers", "
 git-tree-sha1 = "21efd19106a55620a188615da6d3d06cd7f6ee03"
 uuid = "a3f928ae-7b40-5064-980b-68af3947d34b"
 version = "2.13.93+0"
-
-[[ForceImport]]
-deps = ["Test"]
-git-tree-sha1 = "7ac07d5194360af910146abd33af89bb69541194"
-uuid = "9dda63f9-cce7-5873-89fa-eccbb2fffcde"
-version = "0.0.3"
 
 [[Formatting]]
 deps = ["Printf"]
@@ -801,12 +784,6 @@ git-tree-sha1 = "37c1631cb3cc36a535105e6d5557864c82cd8c2b"
 uuid = "01d81517-befc-4cb6-b9ec-a95719d0359c"
 version = "0.5.0"
 
-[[Reduce]]
-deps = ["AbstractTensors", "ForceImport", "LinearAlgebra", "REPL", "ReplMaker", "SyntaxTree"]
-git-tree-sha1 = "decab29ece048b8808391025b8c423530646e792"
-uuid = "93e0c654-6965-5f22-aba9-9c1ae6b3c259"
-version = "1.2.11"
-
 [[Reexport]]
 git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
@@ -817,12 +794,6 @@ deps = ["SHA", "Scratch"]
 git-tree-sha1 = "cdbd3b1338c72ce29d9584fdbe9e9b70eeb5adca"
 uuid = "05181044-ff0b-4ac5-8273-598c1e38db00"
 version = "0.1.3"
-
-[[ReplMaker]]
-deps = ["REPL", "Unicode"]
-git-tree-sha1 = "76098218397ec93b925b70ce355144d539b1a8b4"
-uuid = "b873ce64-0db9-51f5-a568-4457d8e49576"
-version = "0.2.5"
 
 [[Requires]]
 deps = ["UUIDs"]
@@ -919,12 +890,6 @@ deps = ["Adapt", "DataAPI", "StaticArrays", "Tables"]
 git-tree-sha1 = "2ce41e0d042c60ecd131e9fb7154a3bfadbf50d3"
 uuid = "09ab397b-f2b6-538f-b94a-2f83cf4a842a"
 version = "0.6.3"
-
-[[SyntaxTree]]
-deps = ["Test"]
-git-tree-sha1 = "9f33aae2c72d812968a6b7af9e189aa925661a99"
-uuid = "a4af3ec5-f8ac-5fed-a759-c2e80b4d74cb"
-version = "1.0.1"
 
 [[TOML]]
 deps = ["Dates"]
