@@ -1,6 +1,7 @@
 using InformationInequalities
 using Documenter
 using Plots
+using LinearAlgebra
 
 
 DocMeta.setdocmeta!(InformationInequalities, :DocTestSetup, :(using InformationInequalities); recursive=true)
