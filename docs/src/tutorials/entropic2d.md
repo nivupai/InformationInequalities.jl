@@ -15,7 +15,7 @@ While characterizing the solution set ``\mathbf{\Lambda}`` (or even its hull) is
 
 To demonstrate the functionality, let us consider the following interval matrix
 
-```@example eigs
+```@example eigs1
 using InformationInequalities
 
 A = [3 2 1
@@ -27,7 +27,7 @@ A = [3 2 1
 
 To get a qualitative evaluation of the enclosure, we can simulate the solution set of ``\mathbf{A}`` using Montecarlo, as it is done in the following example
 
-```@example eigs
+```@example eigs1
 using LinearAlgebra;
 using Random; # hide
 Random.seed!(42) # hide
@@ -50,9 +50,9 @@ scatter!(rpart[3, :], ipart[3, :]; label="λ₃")
 scatter!(rpart[4, :], ipart[4, :]; label="λ₄")
 xlabel!("real")
 ylabel!("imag")
-savefig("eigs.png") # hide
+savefig("eigs1.png") # hide
 ```
 
-![](eigs.png)
+![](eigs1.png)
 
 Internally, the generical interval eigenvalue problem is
