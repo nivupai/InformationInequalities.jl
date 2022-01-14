@@ -15,15 +15,15 @@ If you use this package in your work, please cite it as
 ```
 @software{ferranti2021interval,
 author = {
-            Luca Feranti and
-            Marcelo Forets and
-            David P. Sanders
+            Nivedita Rethnakar and
+            Raymond W Yeung
+            Suhas Diggavi
          },
-title  = {IntervalLinearAlgebra.jl: linear algebra done rigorously},
-month  = {9},
-year   = {2021},
-doi    = {10.5281/zenodo.5363563},
-url    = {https://github.com/juliaintervals/IntervalLinearAlgebra.jl}
+title  = {InformationInequalities.jl: linear algebra done rigorously},
+month  = {1},
+year   = {2022},
+doi    = {10.5282/zenodo.5363564},
+url    = {https://github.com/juliaintervals/InformationInequalities.jl}
 }
 ```
 
@@ -42,7 +42,7 @@ url    = {https://github.com/juliaintervals/IntervalLinearAlgebra.jl}
 Open a Julia session and enter
 
 ```julia
-using Pkg; Pkg.add("IntervalLinearAlgebra")
+using Pkg; Pkg.add("InformationInequalities")
 ```
 
 this will download the package and all the necessary dependencies for you. Next you can import the package with
@@ -57,9 +57,9 @@ and you are ready to go.
 - [**STABLE**][stable-url] -- Documentation of the latest release
 - [**DEV**][dev-url] -- Documentation of the current version on main (work in progress)
 
-The package was also presented at JuliaCon 2021! The video is available [here](https://youtu.be/fre0TKgLJwg) and the slides [here](https://github.com/lucaferranti/ILAjuliacon2021)
+The package was also presented at BLA! The video is available [here](https://youtu.be/QHEV9Ie6spo) and the slides [here](https://youtu.be/QHEV9Ie6spo)
 
-[![JuliaCon 2021 video](https://img.youtube.com/vi/fre0TKgLJwg/0.jpg)](https://youtu.be/fre0TKgLJwg)
+[![Raymond Yeung 2020 talk](https://img.youtube.com/vi/QHEV9Ie6spo/0.jpg)](https://youtu.be/QHEV9Ie6spo)
 
 ## Quickstart
 
@@ -85,22 +85,22 @@ plot!(IntervalBox(Xenclose), label="enclosure")
 
 ## Contributing
 
-If you spot something strange in the software (something doesn't work or doesn't behave as expected) do not hesitate to open a [bug issue](https://github.com/JuliaIntervals/IntervalLinearAlgebra.jl/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBUG%5D).
+If you spot something strange in the software (something doesn't work or doesn't behave as expected) do not hesitate to open a [bug issue](https://github.com/InformationInequalities.jl/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBUG%5D).
 
-If have an idea of how to make the package better (a new feature, a new piece of documentation, an idea to improve some existing feature), you can open an [enhancement issue](https://github.com/JuliaIntervals/IntervalLinearAlgebra.jl/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=%5Bfeature+request%5D%3A+). 
+If have an idea of how to make the package better (a new feature, a new piece of documentation, an idea to improve some existing feature), you can open an [enhancement issue](https://github.com/InformationInequalities.jl/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=%5Bfeature+request%5D%3A+). 
 
-If you feel like your issue does not fit any of the above mentioned templates (e.g. you just want to ask something), you can also open a [blank issue](https://github.com/JuliaIntervals/IntervalLinearAlgebra.jl/issues/new).
+If you feel like your issue does not fit any of the above mentioned templates (e.g. you just want to ask something), you can also open a [blank issue](https://github.com/InformationInequalities.jl/issues/new).
 
-Pull requests are also very welcome! More details in the [contributing guidelines](https://juliaintervals.github.io/IntervalLinearAlgebra.jl/stable/CONTRIBUTING/)
+Pull requests are also very welcome! More details in the [contributing guidelines](https://nivupai.github.io/InformationInequalities.jl/stable/CONTRIBUTING/)
 
 The core developers of the package can be found in the `#intervals` channel in the Julia slack or zulip, links to join the platforms can be found [here](https://julialang.org/community/). Come to chat with us!
 
 ## References
 
-An excellent introduction to interval linear algebra is
-J. Horácek, _Interval Linear and Nonlinear Systems_, 2019, available [here](https://kam.mff.cuni.cz/~horacek/source/horacek_phdthesis.pdf)
+An excellent introduction to Information Measures is
+R W Yeung, TBD, 2019, available [here](https://www.bla.du/xx.pdf)
 
-See also the complete list of [references](https://juliaintervals.github.io/IntervalLinearAlgebra.jl/dev/references) for the concepts and algorithms used in this package.
+See also the complete list of [references](https://juliaintervals.github.io/InformationInequalities.jl/dev/references) for the concepts and algorithms used in this package.
 
 ## Related packages
 
@@ -112,7 +112,6 @@ See also the complete list of [references](https://juliaintervals.github.io/Inte
 The development of this package started during TBD.
 
 [ver-img]: https://img.shields.io/github/v/release/juliaintervals/IntervalLinearAlgebra.jl
-
 [mit-img]: https://img.shields.io/badge/license-MIT-yellow.svg
 
 [ci-img]: https://github.com/juliaintervals/IntervalLinearAlgebra.jl/workflows/CI/badge.svg
