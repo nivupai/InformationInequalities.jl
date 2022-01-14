@@ -1,0 +1,13 @@
+name = "InformationInequalities"
+uuid = "b4972362-a981-4dc4-9e05-19b54dfae4bc"
+authors = ["Nivedita Rethnakar et al."]
+version = "0.1.0"
+
+[compat]
+julia = "1.7.1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
