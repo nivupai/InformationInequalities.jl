@@ -14,6 +14,7 @@ makedocs(;
         prettyurls=get(ENV, "CI", "false") == "true",
         canonical="https://nivupai.github.io/InformationInequalities.jl",
         assets=String[],
+        collapselevel=1,
     ),
     pages=[
         "Home" => "index.md",
