@@ -13,13 +13,13 @@ This package contains routines to perform numerical linear algebra using interva
 If you use this package in your work, please cite it as
 
 ```
-@software{ferranti2021interval,
+@software{nrethnakar2022,
 author = {
             Nivedita Rethnakar and
             Raymond W Yeung
             Suhas Diggavi
          },
-title  = {InformationInequalities.jl: linear algebra done rigorously},
+title  = {InformationInequalities.jl: Exploring Information Theoretic Inequalities},
 month  = {1},
 year   = {2022},
 doi    = {10.5282/zenodo.5363564},
@@ -48,7 +48,7 @@ using Pkg; Pkg.add("InformationInequalities")
 this will download the package and all the necessary dependencies for you. Next you can import the package with
 
 ```julia
-using IntervalLinearAlgebra
+using InformationInequalities
 ```
 
 and you are ready to go.
