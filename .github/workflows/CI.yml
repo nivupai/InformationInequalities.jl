@@ -56,7 +56,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
       - run: |
-          julia --project=docs -e '
+          julia --color=yes --project=docs -e '
             using Documenter: DocMeta, doctest
             using InformationInequalities
             DocMeta.setdocmeta!(InformationInequalities, :DocTestSetup, :(using InformationInequalities); recursive=true)
