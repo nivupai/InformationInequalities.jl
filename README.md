@@ -93,7 +93,7 @@ If you feel like your issue does not fit any of the above mentioned templates (e
 
 Pull requests are also very welcome! More details in the [contributing guidelines](https://nivupai.github.io/InformationInequalities.jl/stable/CONTRIBUTING/)
 
-The core developers of the package can be found in the `#intervals` channel in the Julia slack or zulip, links to join the platforms can be found [here](https://julialang.org/community/). Come to chat with us!
+
 
 ## References
 

@@ -1,5 +1,6 @@
 using InformationInequalities
 using Documenter
+using Plots
 
 DocMeta.setdocmeta!(InformationInequalities, :DocTestSetup, :(using InformationInequalities); recursive=true)
 
@@ -15,10 +16,21 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
+        "Tutorials" => [
+            "Canonical Decompositions" => "tutorials/canonical.md",
+            "Entropic Space" => "tutorials/entropic2d.md"
+        ],
+        "Explanations" => [
+            "Canonical Decomposition" => "explanations/decomposition.md",
+            "oXitip: Machine Proof Checker" => "explanations/oxitip.md"
+        ],
+        "References" => "references.md",
+        "Contributing" => "CONTRIBUTING.md"
     ],
 )
 
 deploydocs(;
     repo="github.com/nivupai/InformationInequalities.jl",
     devbranch="main",
+    push_preview=true
 )
