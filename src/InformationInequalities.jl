@@ -8,9 +8,7 @@ using Reduce
 using LaTeXStrings
 # Write your package code here.
 
-export order_string
-export add_two
-export greet
+
 
 
 """
@@ -58,5 +56,9 @@ More bla
 function add_two(x,y)
     return x+y
 end
+
+export order_string
+export add_two
+export greet
 
 end
