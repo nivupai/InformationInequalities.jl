@@ -11,6 +11,7 @@ Note that the generator matrix is `K \times L`
 Pictorial view for `n=3`:
 ```@example EntropicMatrixPlot
     using InformationInequalities
+    using Plots,LinearAlgebra
     n=3
     G,K,L=find_matrixG(n)
     heatmap(transpose(G),aspectratio=1,color=:viridis)
@@ -22,6 +23,7 @@ Pictorial view for `n=3`:
 Pictorial view for `n=4`:
 ```@example EntropicMatrixPlot4
     using InformationInequalities
+    using Plots,LinearAlgebra
     n=4
     G,K,L=find_matrixG(n)
     heatmap(transpose(G),aspectratio=1,color=:viridis)
