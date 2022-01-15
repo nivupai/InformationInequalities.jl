@@ -14,7 +14,10 @@ Pictorial view for `n=3`:
     n=3
     G,K,L=find_matrixG(n)
     heatmap(transpose(G),aspectratio=1,color=:viridis)
+    savefig("heatmapH3.svg") # hide 
 ```
+![](heatmapH3.svg)
+
 
 Pictorial view for `n=4`:
 ```@example EntropicMatrixPlot4
@@ -22,8 +25,9 @@ Pictorial view for `n=4`:
     n=4
     G,K,L=find_matrixG(n)
     heatmap(transpose(G),aspectratio=1,color=:viridis)
+    savefig("heatmapH4.svg") # hide 
 ```
-
+![](heatmapH4.svg)
 
 # Singular values of the Entropic Space
 The singular values of the generator matrix follows some structure.
@@ -37,9 +41,9 @@ using Plots
     scatter!(svdvals(find_matrixG(4)[1]),label="Γ4")
     scatter!(svdvals(find_matrixG(5)[1]),label="Γ5")
     ylabel!("λ")
-savefig("eigsEntropic.png") # hide
+savefig("eigsEntropic.svg") # hide
 ```
-![](eigsEntropic.png)
+![](eigsEntropic.svg)
 
 ## Eigenvalues of interval matrices
 
