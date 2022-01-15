@@ -185,3 +185,36 @@ function InformationExpressionToCanonical(F::AbstractString="-2.32I(X;Y|Z1,Z2)")
 	
 	return Z
 end
+
+
+"""
+	linearIEexpr2Can(A)
+```julia-repl
+julia>LinearInformationExpressionToCanonical("I(X;Y|Z)-2.3H(U,V)-2H(u)")
+"1H(X,Z)+1H(Y,Z)-1H(X,Y,Z)-1H(Z)-2.3H(U,V)-2H(u)"
+```
+"""
+function LinearInformationExpressionToCanonical(A)
+A1=replace(A,"-"=>"+-","+I("=>"+1I(","-I("=>"+-1I(","+H("=>"+1H(","-H("=>"+-1H(")
+A2=split.(A1,"+")
+A3=InformationExpressionToCanonical.(A2)
+	# A4=prod(A3) 
+	A4=""
+	for ii=1:length(A3)
+		A4= A4 * "+" * A3[ii]
+	end
+	A5=replace(A4,"+-"=>"-")
+	return A5
+end
+
+
+"""
+    plotH(S,...)
+```julia-repl
+julia>plotH2("H(X,Y)+1H(X,Y)+3H(X1,X2,X3)",curves=:false,nodecolor=:gold,edgecolor=:gray,nodeshape=:rect,nodesize=0.15)
+```
+"""
+function plotH(S;kwargs...)
+    p=plot(Meta.parse(S);kwargs...)
+    return p
+end
