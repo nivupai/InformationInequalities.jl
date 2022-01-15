@@ -293,4 +293,43 @@ function find_matrixG(n::Int64=3)
 end
 
 
+function find_entropic_vector_int(n::Int64=3,entropicVector="1h12-1h2")
+	x= entropicVector * "+"
+		listE=unique_entropy_vector(n)[3]
+	   sortedListE="h" .* string.(sort(parse.(Int64,replace.(listE,"h"=>"")),rev=true))
+	G=zeros(1,length(listE))
 
+	for idx=1:length(listE)
+		mx=match(Regex("([-|+]?\\d$(sortedListE[idx])[-|+]+)"),x) # special quantifier Z to identify the end word
+
+	if(mx == nothing)
+		G[idx]=0
+	else
+		mz=match(r"([-|+]?\dh)",mx.captures[1])
+		G[idx]= parse(Int64,replace(mz.captures[1],"h"=>""))	
+	end
+		end
+	return G[:]
+end
+
+"""
+Given a linear expression in canonical form, it finds the co-ordinates in the entropic space `Γ`
+"""
+function find_entropic_vector(n::Int64=3,entropicVector="1h12-1h2")
+	x= entropicVector * "+"
+	listE=unique_entropy_vector(n)[3]
+	sortedListE="h" .* string.(sort(parse.(Int64,replace.(listE,"h"=>"")),rev=true))
+    G=zeros(1,length(listE))
+	for idxx=1:length(listE)
+	    mx=match(Regex("([-|+]?\\d*[.]?\\d*$(sortedListE[idxx])[-|+]+)"),x)
+
+	    if(mx == nothing)
+		    G[idxx]=0.0
+	    else
+		# mz=match(r"([-|+]?\dh)",mx.captures[1])
+		    mz=match(r"([-|+]?[\d]*[.]?[\d]*h)",mx.captures[1])
+		    G[idxx]= parse(Float64,replace(mz.captures[1],"h"=>""))	
+	    end
+	end
+    return G[:]
+end

@@ -27,6 +27,8 @@ export find_matrixG
 export find_entropic_vector
 export unique_entropy_vector
 export entropy_vector
+export find_entropic_vector
+export find_entropic_vector_int
 
 include("visualization/ploting.jl")
 export plotEntropyTree
