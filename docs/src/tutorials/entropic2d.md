@@ -5,6 +5,7 @@ The singular values of the generator matrix follows some structure.
 
 ```@example eigsEntropic
 using LinearAlgebra;
+using InformationInequalities
 using Plots
 	scatter(svdvals(find_matrixG(2)[1]),label="Γ2")
     scatter!(svdvals(find_matrixG(3)[1]),label="Γ3")
