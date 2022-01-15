@@ -66,3 +66,4 @@ jobs:
             using InformationInequalities
             DocMeta.setdocmeta!(InformationInequalities, :DocTestSetup, :(using InformationInequalities); recursive=true)
             doctest(InformationInequalities)'
+      - run: julia --color=yes --project=docs docs/make.jl
