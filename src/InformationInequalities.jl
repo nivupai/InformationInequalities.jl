@@ -19,6 +19,7 @@ export ElementalMeasures
 export Elemental2Canonical
 export Elemental2Canonical_H
 export Elemental2Canonical_MI
+export InformationExpressionToCanonical
 
 """
 Each word in a sentence (string) is sorted alphabetically.

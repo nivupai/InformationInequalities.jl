@@ -133,3 +133,55 @@ function Elemental2Canonical(s::String="I(Xi;X🐬|π)")
 	end
 	return C
 end
+
+
+
+
+#=
+"""
+	InformationExpressionToCanonical(F::AbstractString="-2.32I(X;Y|Z1,Z2)")
+Convert a single scaled Information measure to its canonnical decomposition form. elemental Information measure to canonical form.
+If `F` is unspecified, it performs on a default expression.
+
+##### Examples
+```julia-repl
+julia> InformationExpressionToCanonical("2.32I(X;Y🍎|Z1,Z2)")
+"2.32I(X;Y🍎|Z1,Z2)"
+
+julia> InformationExpressionToCanonical("3H(β😄,Y🍎|Z1,Z2)")
+"3H(β😄,Y🍎|Z1,Z2)"
+```
+"""
+=#
+function InformationExpressionToCanonical(F::AbstractString="-2.32I(X;Y|Z1,Z2)")
+	# Do check and pick only one Iexpr H() or I() with scaling
+    
+	 kk=match(r"(^[+|-]?[H|I][(])",F)  #Check if starts with bare I() or H(
+	if kk != nothing # starts with bare I() or H(
+		sExpr=replace(string(F),"-I("=>"I(","-H("=>"H(")
+		# sCoef="1"
+		# kk.match[1]
+		ρ = (kk.match[1]=='-') ? -1 : 1
+		
+		sCoef = string(ρ)
+		 Elemental2Canonical(sExpr)
+		# @show sCoef=(kk.match[1]=='-') ? "-1" : "1"
+	else
+	
+	strIH=r"([H|I]+\([\w](.)*[\)])"
+	strN=r"([-|+]?[\d]*[\.]?[\d ?]*)"
+	Mexp=match(strIH,F)
+	Mcoef=match(strN,F)
+
+	sExpr=string(Mexp.captures[1])
+	sCoef=string(Mcoef.captures[1])
+	scalar=parse(Float64,sCoef)
+	end
+	CanExpr=Elemental2Canonical(sExpr)
+	Z0=replace(CanExpr,"H(" =>sCoef *"H(")
+	Z1=replace(Z0,"--"=>"+")
+	Z=replace(Z1,"+-"=>"-")
+	
+	
+	return Z
+end
