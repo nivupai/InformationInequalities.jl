@@ -22,6 +22,11 @@ export Elemental2Canonical_MI
 export InformationExpressionToCanonical
 export LinearInformationExpressionToCanonical
 
+export find_matrixG
+export find_entropic_vector
+export unique_entropy_vector
+export entropy_vector
+
 include("visualization/ploting.jl")
 export plotEntropyTree
 

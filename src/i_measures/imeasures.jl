@@ -208,13 +208,27 @@ A3=InformationExpressionToCanonical.(A2)
 end
 
 
+
 """
-    plotH(S,...)
-```julia-repl
-julia>plotH2("H(X,Y)+1H(X,Y)+3H(X1,X2,X3)",curves=:false,nodecolor=:gold,edgecolor=:gray,nodeshape=:rect,nodesize=0.15)
-```
+For a given number `n` of random variables, list down all the elemental information measures and their corresponding entropic decompositions. The entropic vectors are identified with the prefix `h` and follows lexicographic mapping. e.g., `H(X1,X3,X7)=h137`. Note that, for now this lexicographic mapping works only for `n < 10`.  
 """
-function plotH(S;kwargs...)
-    p=plot(Meta.parse(S);kwargs...)
-    return p
+function entropy_vector(n::Int64,RV::AbstractString="X")
+	X=Elemental2Canonical.(ElementalMeasures(n,RV))
+	Y=sort(replace.(X,","=>"","X"=>"",")"=>"","("=>"","H"=>"h"))
+	return Y
+end
+
+"""
+For a given number `n<10` of random variables, list down all the unique elemental information measures and their corresponding entropic decompositions. The entropic vectors are identified with the prefix `h` and follows lexicographic mapping. e.g., `H(X1,X3,X7)=h137`. Note that, for now this lexicographic mapping works only for `n < 10`.  
+"""
+function unique_entropy_vector(n::Int64=3)
+    EMeasures=Elemental2Canonical.(ElementalMeasures(n))
+    EMnumber=(replace.(EMeasures,","=>"","X"=>"",")"=>"","("=>"","H"=>"","+"=>",","-"=>","))
+    y=[];
+    for kk in 1:length(EMnumber)
+        y=[y;"h" .* unique(sort(join.(sort.(digits.(parse.(Int64,split(EMnumber[kk],",")))))))]
+    end
+    Hfull=y;
+    Hminimal = unique(Hfull)
+    return EMeasures,Hfull,Hminimal
 end
