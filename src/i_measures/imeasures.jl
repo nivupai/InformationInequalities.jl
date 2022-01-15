@@ -83,7 +83,7 @@ function Elemental2Canonical_MI(s::String="I(Xi;X🐬|π)")
 end
 
 
-f"""
+"""
 Elemental2Canonical_H(s::String="I(Xi;X🐬|π)")
 Convert a Entropy or Conditional entropy expression s to elemental form.
 If `s` is unspecified, it performs a default expression.
