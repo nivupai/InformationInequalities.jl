@@ -57,14 +57,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
       - run: |
-            julia --project=docs -e '
-              using Pkg
-              Pkg.develop(PackageSpec(path=pwd()))
-              Pkg.instantiate()'
-      - run: |
           julia --color=yes --project=docs -e '
             using Documenter: DocMeta, doctest
             using InformationInequalities
             DocMeta.setdocmeta!(InformationInequalities, :DocTestSetup, :(using InformationInequalities); recursive=true)
             doctest(InformationInequalities)'
-      - run: julia --color=yes --project=docs docs/make.jl
