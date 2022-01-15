@@ -195,9 +195,9 @@ julia>LinearInformationExpressionToCanonical("I(X;Y|Z)-2.3H(U,V)-2H(u)")
 ```
 """
 function LinearInformationExpressionToCanonical(A)
-A1=replace(A,"-"=>"+-","+I("=>"+1I(","-I("=>"+-1I(","+H("=>"+1H(","-H("=>"+-1H(")
-A2=split.(A1,"+")
-A3=InformationExpressionToCanonical.(A2)
+    A1=replace(A,"-"=>"+-","+I("=>"+1I(","-I("=>"+-1I(","+H("=>"+1H(","-H("=>"+-1H(")
+    A2=split.(A1,"+")
+    A3=InformationExpressionToCanonical.(A2)
 	# A4=prod(A3) 
 	A4=""
 	for ii=1:length(A3)
@@ -254,6 +254,20 @@ function find_entropic_vector(n::Int64=3,entropicVector="1h12-1h2")
 	return G[:]
 end
 
+"""
+Find the Entropic matrix `G`` for a given `n`
+```julia-repl
+julia> entropic_matrix(3)
+```
+"""
+function entropic_matrix(m::Int64=2)
+	Q=minimal_EIM_list_canonical(m)[2]
+	Qtmp=replace.(Q,r"^\+h" => s"1h") # Substitute the first +h
+	Qtmp1=replace.(Qtmp,r"\+h" => s"+1h") # Substitute all +h
+	Qout=replace.(Qtmp1,r"\-h" => s"-1h")
+	return Qout	
+end
+
 
 """
 Find the Entropic matrix `G`` for a given `n`
@@ -262,13 +276,13 @@ julia> find_matrixG(3)
 ```
 """
 function find_matrixG(n::Int64=3)
-	L=length(toy_entropic_matrix(n))
+	L=length(entropic_matrix(n))
 	K=length(unique_entropy_vector(n)[3]) # Number of unique entropic dimensions
 	Gv=[]
 	# @show L
 	for idx=1:L
-		U=toy_entropic_matrix(n)[idx]
-	gg= find_entropic_vector(n,U)
+		U = entropic_matrix(n)[idx]
+	    gg = find_entropic_vector(n,U)
 		# @show n,L,idx, gg
 		Gv=[Gv;gg]
 		# Gm[idx,:]=gg
