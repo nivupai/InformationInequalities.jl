@@ -36,7 +36,7 @@ julia> ElementalMeasures(3,"🐘")
 ```
 """
 function ElementalMeasures(n::Int64=2,RV::AbstractString="X")
-	yI=ConditionalMutualInformation(n,RV)
+	yI=ConditionalMutualInformationList(n,RV)
 	yH=ConditionalEntropy(n,RV)
 	y=[yH;yI][:]
 	return y	
