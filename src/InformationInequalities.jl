@@ -22,6 +22,7 @@ export Elemental2Canonical_MI
 export InformationExpressionToCanonical
 export LinearInformationExpressionToCanonical
 
+export entropic_matrix
 export find_matrixG
 export find_entropic_vector
 export unique_entropy_vector
