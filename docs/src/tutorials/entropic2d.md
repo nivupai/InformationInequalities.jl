@@ -15,9 +15,9 @@ Pictorial view for `n=3`:
     n=3
     G,K,L=find_matrixG(n)
     heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
-    savefig("heatmapH3.svg") # hide 
+    savefig("heatmapH3a.svg") # hide 
 ```
-![](heatmapH3.svg)
+![](heatmapH3a.svg)
 
 
 Pictorial view for `n=4`:
@@ -28,9 +28,9 @@ Pictorial view for `n=4`:
     G,K,L=find_matrixG(n)
     #heatmap(transpose(G),aspectratio=1,color=:viridis)
     heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
-    savefig("heatmapH4.svg") # hide 
+    savefig("heatmapH4a.svg") # hide 
 ```
-![](heatmapH4.svg)
+![](heatmapH4a.svg)
 
 # Singular values of the Entropic Space
 The singular values of the generator matrix follows some structure.
