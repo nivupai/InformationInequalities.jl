@@ -10,19 +10,19 @@ julia> ConditionalEntropyList(2,"🍉")
 julia> ConditionalEntropyList(2)
 ["H(X1)" "H(X1|X2)" "H(X2)" "H(X2|X1)"]
 
-julia> ConditionalEntropyList(3)
-["H(X1)"
-"H(X1|X2)"
-"H(X1|X2,X3)"
-"H(X1|X3)"
-"H(X2)"
-"H(X2|X1)"
-"H(X2|X1,X3)"
-"H(X2|X3)"
-"H(X3)"
-"H(X3|X1)"
-"H(X3|X1,X2)"
-"H(X3|X2)"]
+julia> ConditionalEntropyList(3,"dice💠")
+["H(dice💠1)"
+"H(dice💠1|dice💠2)"
+"H(dice💠1|dice💠2,dice💠3)"
+"H(dice💠1|dice💠3)"
+"H(dice💠2)"
+"H(dice💠2|dice💠1)"
+"H(dice💠2|dice💠1,dice💠3)"
+"H(dice💠2|dice💠3)"
+"H(dice💠3)"
+"H(dice💠3|dice💠1)"
+"H(dice💠3|dice💠1,dice💠2)"
+"H(dice💠3|dice💠2)"]
 ```
 """
 function ConditionalEntropyList(m::Int64=2,RV::AbstractString="X")
