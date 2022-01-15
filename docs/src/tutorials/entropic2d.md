@@ -14,7 +14,7 @@ Pictorial view for `n=3`:
     using Plots,LinearAlgebra
     n=3
     G,K,L=find_matrixG(n)
-    heatmap(transpose(G),aspectratio=1,color=:viridis)
+    heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
     savefig("heatmapH3.svg") # hide 
 ```
 ![](heatmapH3.svg)
@@ -26,7 +26,8 @@ Pictorial view for `n=4`:
     using Plots,LinearAlgebra
     n=4
     G,K,L=find_matrixG(n)
-    heatmap(transpose(G),aspectratio=1,color=:viridis)
+    #heatmap(transpose(G),aspectratio=1,color=:viridis)
+    heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
     savefig("heatmapH4.svg") # hide 
 ```
 ![](heatmapH4.svg)
