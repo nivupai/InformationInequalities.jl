@@ -9,6 +9,9 @@ using LaTeXStrings
 
 
 include("utils/utils.jl")
+include("entropy/entropies.jl")
+
+export ConditionalEntropy
 
 """
 Each word in a sentence (string) is sorted alphabetically.
@@ -96,5 +99,8 @@ export add_two
 export greet
 export find_subset
 export order_entropic
+export numEIM
+
+
 
 end
