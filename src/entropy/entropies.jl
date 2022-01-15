@@ -1,3 +1,4 @@
+push!( LOAD_PATH, "../" )
 import InformationInequalities  # Import the module to  have access to functions
 
 """

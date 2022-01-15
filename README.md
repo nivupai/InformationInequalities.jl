@@ -100,7 +100,7 @@ Pull requests are also very welcome! More details in the [contributing guideline
 An excellent introduction to Information Measures is
 R W Yeung, TBD, 2019, available [here](https://www.bla.du/xx.pdf)
 
-See also the complete list of [references](https://juliaintervals.github.io/InformationInequalities.jl/dev/references) for the concepts and algorithms used in this package.
+See also the complete list of [references](https://nivupai.github.io/InformationInequalities.jl/dev/references) for the concepts and algorithms used in this package.
 
 ## Related packages
 
