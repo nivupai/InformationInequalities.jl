@@ -232,3 +232,51 @@ function unique_entropy_vector(n::Int64=3)
     Hminimal = unique(Hfull)
     return EMeasures,Hfull,Hminimal
 end
+
+
+function find_entropic_vector(n::Int64=3,entropicVector="1h12-1h2")
+	# vv=toy_entropic_matrix(n)[5]
+	x= entropicVector * "+"
+		listE=unique_entropy_vector(n)[3]
+	   sortedListE="h" .* string.(sort(parse.(Int64,replace.(listE,"h"=>"")),rev=true))
+	G=zeros(1,length(listE))
+
+	for idx=1:length(listE)
+		mx=match(Regex("([-|+]?\\d$(sortedListE[idx])[-|+]+)"),x) # special quantifier Z to identify the end word
+
+	if(mx == nothing)
+		G[idx]=0
+	else
+		mz=match(r"([-|+]?\dh)",mx.captures[1])
+		G[idx]= parse(Int64,replace(mz.captures[1],"h"=>""))	
+	end
+		end
+	return G[:]
+end
+
+
+"""
+Find the Entropic matrix `G`` for a given `n`
+```julia-repl
+julia> find_matrixG(3)
+```
+"""
+function find_matrixG(n::Int64=3)
+	L=length(toy_entropic_matrix(n))
+	K=length(unique_entropy_vector(n)[3]) # Number of unique entropic dimensions
+	Gv=[]
+	# @show L
+	for idx=1:L
+		U=toy_entropic_matrix(n)[idx]
+	gg= find_entropic_vector(n,U)
+		# @show n,L,idx, gg
+		Gv=[Gv;gg]
+		# Gm[idx,:]=gg
+	end
+	G=reshape(Gv,K,L)
+	H=Int.(parse.(Float64,string.(G)))'
+	return H,K,L
+end
+
+
+
