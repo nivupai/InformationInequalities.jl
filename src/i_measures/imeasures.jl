@@ -269,6 +269,61 @@ function entropic_matrix(m::Int64=2)
 end
 
 
+
+"""
+For a given number `n` of random variables, list down all the elemental information measures in minimal canonical form. 
+```julia-repl
+julia> u,v,m,n=minimal_EIM_list_canonical(2)
+```
+"""
+function minimal_EIM_list_canonical(n::Int64=2)
+	x=entropy_vector(n);
+	x2=order_entropic_expression.(order_entropic.(x))
+	y=unique(x2)
+	return x,y,length(x),length(y)
+end
+
+"""
+Each entropy word in an entropic vector is sorted.
+
+#### Examples
+```julia-repl
+julia> order_entropic("h24-h32-h132-h2")
+"h24 - h23 - h123 - h2"
+
+```
+"""
+function order_entropic(s::AbstractString="Hello world")
+	
+	s0=replace(s,"h"=>"h ","+"=>" + ","-"=>" - ")
+	x=split(s0," ") # Split into words delim=" "
+	
+	Y=""
+	for wIdx = 1:length(x)
+		# w=x[wIdx] # word
+		y=string(sort([a for a in x[wIdx]])...)  # sort each word
+		Y= Y * " " * y 
+	end
+	Yout=replace(Y,"h "=>"h"," " =>"")
+	
+	return Yout
+end
+
+
+"""
+Express an entropic expression in the lexicographic order of entropic vectors
+```julia-repl
+julia> order_entropic_expression("h12-h32-123")
+```
+"""
+function order_entropic_expression(X::AbstractString="h12-h32-123")
+	Y=join.(sort.(split.(replace.(X,"-h"=>" -h","+h"=>" +h","h"=>" +h")," ")))
+	return Y
+end
+
+
+
+
 """
 Find the Entropic matrix `G` for a given `n`
 ```julia-repl

@@ -30,6 +30,10 @@ export entropy_vector
 export find_entropic_vector
 export find_entropic_vector_int
 
+export minimal_EIM_list_canonical
+export order_entropic
+export order_entropic_expression
+
 include("visualization/ploting.jl")
 export plotEntropyTree
 
