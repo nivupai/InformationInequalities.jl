@@ -123,7 +123,7 @@ export order_string
 export add_two
 export greet
 export find_subset
-export order_entropic
+export order_entropic1
 export numEIM
 
 
