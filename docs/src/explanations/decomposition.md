@@ -1,8 +1,13 @@
-# Preconditioning interval linear systems
+# Information Measures in Canonical form
 
 ```@contents
 Pages = ["decomposition.md"]
 ```
+
+# Canonical Represenation
+Canonical representation refers to expressiong information expression as entropies and joint entropies. e.g., ``H(X1,X2,...,X_n)``. Elemental expressions can be decomposed to canonical form as follows:
+* ``H\left(X_i|\textbf{X}_{\mathcal{N} \backslash \{i\}}\right) = H\left(\textbf{X}_{\mathcal{N}}\right)``
+* ``I\left(X_i;X_j|\textbf{X}_{\kappa}\right)= H\left(X_i,\textbf{X}_\kappa\right)+H\left(X_j,\textbf{X}_\kappa\right)-H\left(X_i,X_j,\textbf{X}_\kappa\right)-H\left(\textbf{X}_\kappa\right)``
 
 ## Basic concepts
 
@@ -24,13 +29,7 @@ which is called *preconditioned system*. Let us denote by ``A_c`` the *midpoint 
 - Inverse diagonal midpoint preconditioning: ``C\approx D_{A_c}^{-1}`` where ``D_{A_c}`` is the diagonal matrix containing the main diagonal of ``A_c``.
 
 
-## Advantages of preconditioning
 
-Using preconditioning to solve an interval linear system can have mainly two advantages.
-
-### Extend usability of algorithms 
-
-Some algorithms require the matrix to have a specific structure in order to be used. For example Hansen-Bliek-Rohn algorithm requires ``\mathbf{A}`` to be an H-matrix. However, the algorithm can be extended to work to strongly regular matrices using inverse midpoint preconditioning. (Recall that an interval matrix is strongly regular if ``A_c^{-1}\mathbf{A}`` is an H-matrix).
 
 ### Improve numerical stability
 
