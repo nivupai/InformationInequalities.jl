@@ -42,6 +42,17 @@ function ElementalMeasures(n::Int64=2,RV::AbstractString="X")
 	return y	
 end
 
+"""
+For a given number `n` of random variables, list down the maximum number of elemental information measures in minimal canonical form. 
+```julia-repl
+julia> u,v,m,n=numEIM(2)
+```
+"""
+function numEIM(n::Int64=2)
+	~,~,k,l=minimal_EIM_list_canonical(n)
+	return k,l
+end
+
 
 """
     MutualInformation_ElemToCanon(s::String="I(Xi;X🐬|π)")
