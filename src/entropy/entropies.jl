@@ -6,8 +6,23 @@ List down all conditional Entropy expressions for a given number `n` of random v
 ```julia-repl
 julia> ConditionalEntropyList(2,"🍉")
 ["H(🍉1)" "H(🍉1|🍉2)" "H(🍉2)" "H(🍉2|🍉1)"]
+
 julia> ConditionalEntropyList(2)
 ["H(X1)" "H(X1|X2)" "H(X2)" "H(X2|X1)"]
+
+julia> ConditionalEntropyList(3)
+["H(X1)"
+"H(X1|X2)"
+"H(X1|X2,X3)"
+"H(X1|X3)"
+"H(X2)"
+"H(X2|X1)"
+"H(X2|X1,X3)"
+"H(X2|X3)"
+"H(X3)"
+"H(X3|X1)"
+"H(X3|X1,X2)"
+"H(X3|X2)"]
 ```
 """
 function ConditionalEntropyList(m::Int64=2,RV::AbstractString="X")
