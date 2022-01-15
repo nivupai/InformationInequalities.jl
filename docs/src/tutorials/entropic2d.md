@@ -1,5 +1,20 @@
 # Eigenvalue computations
 
+# Singular values of the Entropic Space
+The singular values of the generator matrix follows some structure.
+
+```@example eigsEntropic
+using LinearAlgebra;
+using Plots
+	scatter(svdvals(find_matrixG(2)[1]),label="Γ2")
+    scatter!(svdvals(find_matrixG(3)[1]),label="Γ3")
+    scatter!(svdvals(find_matrixG(4)[1]),label="Γ4")
+    scatter!(svdvals(find_matrixG(5)[1]),label="Γ5")
+    ylabel!("λ")
+savefig("eigsEntropic.png") # hide
+```
+![](eigsEntropic.png)
+
 ## Eigenvalues of interval matrices
 
 Given a (real or complex) interval matrix ``A\in\mathbb{IC}^{n\times n}``, we define the eigenvalue set 
