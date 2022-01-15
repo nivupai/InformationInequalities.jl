@@ -6,7 +6,7 @@
     G,K,L=find_matrixG(n)
     transpose(G)
 ```
-Note that the generator matrix is `K \times L` 
+Note that the generator matrix is ``K \times L`` 
 
 Pictorial view for `n=3`:
 ```@example EntropicMatrixPlot
