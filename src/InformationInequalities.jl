@@ -8,7 +8,7 @@ using LaTeXStrings
 # Write your package code here.
 
 
-
+include(./utils.jl)
 
 """
 Each word in a sentence (string) is sorted alphabetically.
@@ -95,5 +95,6 @@ export order_string
 export add_two
 export greet
 export find_subset
+export order_entropic
 
 end
