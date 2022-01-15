@@ -11,7 +11,7 @@ using LaTeXStrings
 include("utils/utils.jl")
 include("entropy/entropies.jl")
 
-export ConditionalEntropy
+export ConditionalEntropyList
 
 """
 Each word in a sentence (string) is sorted alphabetically.
