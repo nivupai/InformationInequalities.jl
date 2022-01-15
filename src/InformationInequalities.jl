@@ -8,7 +8,7 @@ using LaTeXStrings
 # Write your package code here.
 
 
-include("utils.jl")
+include("utils/utils.jl")
 
 """
 Each word in a sentence (string) is sorted alphabetically.
