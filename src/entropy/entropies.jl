@@ -23,6 +23,20 @@ julia> ConditionalEntropyList(3,"dice💠")
 "H(dice💠3|dice💠1)"
 "H(dice💠3|dice💠1,dice💠2)"
 "H(dice💠3|dice💠2)"]
+
+julia> ConditionalEntropy(3,"Z")
+["H(Z1)"
+"H(Z1|Z2)"
+"H(Z1|Z2,Z3)"
+"H(Z1|Z3)"
+"H(Z2)"
+"H(Z2|Z1)"
+"H(Z2|Z1,Z3)"
+"H(Z2|Z3)"
+"H(Z3)"
+"H(Z3|Z1)"
+"H(Z3|Z1,Z2)"
+"H(Z3|Z2)"]
 ```
 """
 function ConditionalEntropyList(m::Int64=2,RV::AbstractString="X")

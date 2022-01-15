@@ -10,8 +10,12 @@ using LaTeXStrings
 
 include("utils/utils.jl")
 include("entropy/entropies.jl")
+include("mutual_information/mi_measures.jl")
+include("i_measures/imeasures.jl")
 
 export ConditionalEntropyList
+export ConditionalMutualInformationList
+export ElementalMeasures
 
 """
 Each word in a sentence (string) is sorted alphabetically.
