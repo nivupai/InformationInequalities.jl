@@ -270,7 +270,7 @@ end
 
 
 """
-Find the Entropic matrix `G`` for a given `n`
+Find the Entropic matrix `G` for a given `n`
 ```julia-repl
 julia> find_matrixG(3)
 ```
