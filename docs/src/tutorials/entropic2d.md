@@ -1,4 +1,29 @@
 # Eigenvalue computations
+# Generator matrix
+```@example EntropicMatrix
+    using InformationInequalities
+    n=3
+    G,K,L=find_matrixG(n)
+    transpose(G)
+```
+Note that the generator matrix is `K \times L` 
+
+Pictorial view for `n=3`:
+```@example EntropicMatrixPlot
+    using InformationInequalities
+    n=3
+    G,K,L=find_matrixG(n)
+    heatmap(transpose(G),aspectratio=1,color=:viridis)
+```
+
+Pictorial view for `n=4`:
+```@example EntropicMatrixPlot4
+    using InformationInequalities
+    n=4
+    G,K,L=find_matrixG(n)
+    heatmap(transpose(G),aspectratio=1,color=:viridis)
+```
+
 
 # Singular values of the Entropic Space
 The singular values of the generator matrix follows some structure.

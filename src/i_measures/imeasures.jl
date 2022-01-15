@@ -354,7 +354,8 @@ function find_matrixG(n::Int64=3)
 		# Gm[idx,:]=gg
 	end
 	G=reshape(Gv,K,L)
-	H=Int.(parse.(Float64,string.(G)))'
+	H0=Int.(parse.(Float64,string.(G)))'
+    H=Int.(H0)
 	return H,K,L
 end
 
