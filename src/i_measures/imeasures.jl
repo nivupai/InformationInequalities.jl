@@ -443,7 +443,7 @@ function GeometryConeGamma2(x,y,z)
 end
 
 """
-Set of discrete points in ``\Gamma_{2}`` confined within a hypercube 
+Set of discrete points in `Γ₂`	 confined within a hypercube 
 """
 function elementsGamma2(;rmin::Float64=0.0,rmax::Float64=1.0,rstep::Float64 = 0.1)
 	x = rmin:rstep:rmax
