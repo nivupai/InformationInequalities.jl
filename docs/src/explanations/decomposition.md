@@ -5,10 +5,21 @@ Pages = ["decomposition.md"]
 ```
 
 # Information Measures
+TBD
 ## Entropy
+TBD
 ## Mutual Information
 
+## Properties of IM
+Positivity (TBD)
+
+
 # Information Inequalities
+``f() \ge 0`` where ``f`` is a linear IE (TBD)
+TBD
+## Unconstrained Inequalities
+## Constrained IE
+
 ## Information Constraints
 TBD
 * Markov Chain
@@ -28,7 +39,10 @@ are called Elemental Information Inequalities (EIM). These are entropies of a si
 
 
 # Canonical Represenation
-Canonical representation refers to expressiong information expression as entropies and joint entropies. e.g., ``H(X1,X2,...,X_n)``. Elemental expressions can be decomposed to canonical form as follows:
+
+Canonical representation refers to expressing information expression as linear combination of entropies and joint entropies. e.g., ``H(X1,X2,...,X_n)``. For every Information Expression one find a unique canonical representation.
+
+Elemental expressions can be decomposed to canonical form as follows:
 * ``H\left(X_i|\textbf{X}_{\mathcal{N} \backslash \{i\}}\right) = H\left(\textbf{X}_{\mathcal{N}}\right)``
 * ``I\left(X_i;X_j|\textbf{X}_{\kappa}\right)= H\left(X_i,\textbf{X}_\kappa\right)+H\left(X_j,\textbf{X}_\kappa\right)-H\left(X_i,X_j,\textbf{X}_\kappa\right)-H\left(\textbf{X}_\kappa\right)``
 
