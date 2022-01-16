@@ -136,11 +136,14 @@ using InformationInequalities
 showProof("-3I(X;Y|Z)+2H(X)",Markov(X,Z,Y))
 ```
 
+!!! Note
+    To use the function `showProof` first need to make sure that the inequality is a `true` Shannon Type inequality. At the moment, the internal check for non-Shannon Tuype inequalities is unstable. FixMe. It is advised to do one pass on oXiTIP or AITIP before trying this. In a later version, a seamless integration is likely.
 
+![oxitip_valid_example1](../assets/oxitip_ex1.png) 
 
 ### Improve numerical stability
 
 Even if the algorithms theoretically work
 
 TBD: The search space is still double exponential without exploiting any sparsity structure which seems to exisit (TBD).
-![gamma2-space-points](../assets/oxitip_complexity.svg)
+![oxitip_complexity_scale](../assets/oxitip_complexity.svg)
