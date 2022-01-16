@@ -457,13 +457,3 @@ function elementsGamma2(;rmin::Float64=0.0,rmax::Float64=1.0,rstep::Float64 = 0.
 	return W
 end
 
-function elementsGamma2(;rmin::Int64=0,rmax::Int64=1,rstep::Float64 = 0.1)
-	x = rmin:rstep:rmax
-    y = rmin:rstep:rmax
-    z = rmin:rstep:rmax
-	vol = [entropic_points(ix,iy,iz,H) for ix in x, iy in y, iz in z]
-	U=vol[findall( x -> x != [], vol )]
-	V=hcat(U...)
-	W=hcat(collect.(V)...)
-	return W
-end
