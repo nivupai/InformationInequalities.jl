@@ -11,13 +11,13 @@ Canonical representation refers to expressiong information expression as entropi
 
 ## Entropic space for ``\Gamma_{2}``
 <p align="center">
-    <img src="docs/src/assets/gamma2gold.png" alt="" width="450"/>
+    <img src="../assets/gamma2gold.png" alt="" width="450"/>
 </p>
 ## Basic concepts
 
 ## Entropic space for ``\Gamma_{2}``
 <p align="center">
-    <img src="docs/src/assets/gamma2.png" alt="" width="450"/>
+    <img src="../assets/gamma2.png" alt="" width="450"/>
 </p>
 
 Consider the square interval linear system
