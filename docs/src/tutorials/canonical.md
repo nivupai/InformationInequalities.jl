@@ -22,7 +22,7 @@ With simplification `simplifyH(A5)` we get
 Using the functions `PlotIE` or `PlotInformationExpression`, it is easy to visualize the tree graph of the canonical decomposition.
 
 ```@example simpletreeEx1
-usin InformationInequalities
+using InformationInequalities
 E="2I(X;Y|Z)+3H(Z)"
 plotIE(E,nodecolor=:forestgreen,curves=false,edgecolor=:lightgray,nodeshape=:rect,title=latexstring(LinearInformationExpressionToCanonical(E))); # Hide
 savefig("gplotEx0")
