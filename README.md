@@ -1,5 +1,5 @@
 
-![](docs/src/assets/gamma2gold.png)
+![](docs/src/assets/logo-text.svg)
 
 | **Pkg Info** | **Build status** | **Documentation** | **Citation** | **Contributing** |
 |:------------:|:----------------:|:-----------------:|:------------:|:----------------:|
