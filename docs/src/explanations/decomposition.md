@@ -65,19 +65,23 @@ Elemental expressions can be decomposed to canonical form as follows:
 
 The region ``\Gamma_{n}^{*}`` is defined as
 
-``\Gamma_{n}^{*} = \bigcup_{p \in \mathcal{P}} \mathbf{h}(p)``
+``\Gamma_{n}^{*} = \bigcup_{p \in \mathcal{P}} \mathfrak{h}(p)``
 
-where ``\mathcal{P}`` is the space of all all probability distributions indued on the random variable space  (TBD. Have to define ``X_1,\ldots X_n`` and its probability space ``mathcal{X}_1 \ldots \mathcal{X}_{n}`` etc.)
+where ``\mathcal{P}`` is the space of all all probability distributions indued on the random variable space  (TBD. Have to define ``X_1,\ldots X_n`` and its probability space ``\mathcal{X}_1 \ldots \mathcal{X}_{n}`` etc.)
 
 ## Geometry of ``\Gamma_{n}``
 ``\Gamma_{n}`` is the space encapsulating all entropic points. 
 
-``\Gamma_{n} \equiv \left\{\mathbf{h} \in \mathbb{R}^{2^{n}-1} | \mathbf{h} \in \mathbb{B} \right\}
+``\Gamma_{n} \equiv \left\{\mathbf{h} \in \mathbb{R}^{2^{n}-1} | \mathbf{h} \in \mathbb{B} \right\}``
 
 ## Examples: Entropic space for ``\Gamma_{2}``
 
 This is easy to visualize. The built in function `volumeΓ()` can be used to generate and then plot the visualization using `plotΓ(n)`.
 
+```@example visualGamma2a
+using InformationInequalities
+plotΓ(n,color=:gold)
+```
 ![gamma2-space-points](../assets/gamma2gold.png)
 
 ## Basic concepts
