@@ -8,7 +8,7 @@
 
 ## Overview
 
-This package contains routines to perform numerical linear algebra using interval arithmetic. This can be used both for rigorous computations and uncertainty propagation.
+This package contains routines to perform Information Theoretic measures. The priliminary build up of this tool is to validate, prove and analyze Information Inequalities. This can be used both for rigorous computations and analysis of Information measures and expressions. 
 
 If you use this package in your work, please cite it as
 
@@ -32,10 +32,10 @@ url    = {https://github.com/juliaintervals/InformationInequalities.jl}
 **Note**: The package is still under active development and things evolve quickly (or at least should)
 
 - enclosure of the solution of interval linear systems
-- exact characterization of the solution set of interval linear systems using Oettli-Präger
-- verified solution of floating point linear systems
-- enclosure of eigenvalues of interval matrices
-- verified computation of eigenvalues and eigenvectors of floating point matrices
+- exact characterization of the entropic space
+- verified proof and ``\LaTeX`` rendering in display
+- enclosure of singularvalues of the entropic space generator matrix
+- Further work
 
 ## Installation
 
@@ -57,7 +57,7 @@ and you are ready to go.
 - [**STABLE**][stable-url] -- Documentation of the latest release
 - [**DEV**][dev-url] -- Documentation of the current version on main (work in progress)
 
-The package was also presented at BLA! The video is available [here](https://youtu.be/QHEV9Ie6spo) and the slides [here](https://youtu.be/QHEV9Ie6spo)
+The package was also presented at BLA! The theoretical basis for this work is developed by Raymond W Yeung. A related video is available [here](https://youtu.be/QHEV9Ie6spo) and the slides [here](https://youtu.be/QHEV9Ie6spo). Other references are TBD
 
 [![Raymond Yeung 2020 talk](https://img.youtube.com/vi/QHEV9Ie6spo/0.jpg)](https://youtu.be/QHEV9Ie6spo)
 
