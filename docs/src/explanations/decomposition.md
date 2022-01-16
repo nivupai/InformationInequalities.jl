@@ -61,7 +61,22 @@ Elemental expressions can be decomposed to canonical form as follows:
 * ``H\left(X_i|\textbf{X}_{\mathcal{N} \backslash \{i\}}\right) = H\left(\textbf{X}_{\mathcal{N}}\right)``
 * ``I\left(X_i;X_j|\textbf{X}_{\kappa}\right)= H\left(X_i,\textbf{X}_\kappa\right)+H\left(X_j,\textbf{X}_\kappa\right)-H\left(X_i,X_j,\textbf{X}_\kappa\right)-H\left(\textbf{X}_\kappa\right)``
 
-## Entropic space for ``\Gamma_{2}``
+# Geometry of ``\Gamma_{n}^{*}``
+
+The region ``\Gamma_{n}^{*}`` is defined as
+
+``\Gamma_{n}^{*} = \bigcup_{p \in \mathcal{P}} \mathbf{h}(p)``
+
+where ``\mathcal{P}`` is the space of all all probability distributions indued on the random variable space  (TBD. Have to define ``X_1,\ldots X_n`` and its probability space ``mathcal{X}_1 \ldots \mathcal{X}_{n}`` etc.)
+
+## Geometry of ``\Gamma_{n}``
+``\Gamma_{n}`` is the space encapsulating all entropic points. 
+
+``\Gamma_{n} \equiv \left\{\mathbf{h} \in \mathbb{R}^{2^{n}-1} | \mathbf{h} \in \mathbb{B} \right\}
+
+## Examples: Entropic space for ``\Gamma_{2}``
+
+This is easy to visualize. The built in function `volumeΓ()` can be used to generate and then plot the visualization using `plotΓ(n)`.
 
 ![gamma2-space-points](../assets/gamma2gold.png)
 
@@ -70,22 +85,22 @@ Elemental expressions can be decomposed to canonical form as follows:
 ## Entropic space for ``\Gamma_{2}``
 ![gamma2-space-points](../assets/gamma2.png)
 
-Consider the square interval linear system
+Consider the linear system
 
 ```math
 \mathbf{Ax}=\mathbf{b},
 ```
 
-*preconditioning* the interval linear system by a *real* matrix ``C`` means to multiply both sides of the equation by ``C``, obtaining the new system
+*TBD* the interval linear system by a *real* matrix ``C`` means to multiply both sides of the equation by ``C``, obtaining the new system
 
 ```math
 C\mathbf{Ax}=C\mathbf{b},
 ```
 
-which is called *preconditioned system*. Let us denote by ``A_c`` the *midpoint matrix* of ``\mathbf{A}``. Popular choices for ``C`` are
+which is called *TBD system*. Let us denote by ``A_c`` the *midpoint matrix* of ``\mathbf{A}``. Popular choices for ``C`` are
 
-- Inverse midpoint preconditioning: ``C\approx A_c^{-1}``
-- Inverse diagonal midpoint preconditioning: ``C\approx D_{A_c}^{-1}`` where ``D_{A_c}`` is the diagonal matrix containing the main diagonal of ``A_c``.
+- Inverse midpoint TBD: ``C\approx A_c^{-1}``
+- Inverse diagonal TBD: ``C\approx D_{A_c}^{-1}`` where ``D_{A_c}`` is the diagonal matrix containing the main diagonal of ``A_c``.
 
 
 
