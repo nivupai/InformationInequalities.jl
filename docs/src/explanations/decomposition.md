@@ -132,7 +132,7 @@ TBD
 **Note**: The showProof has a rendering display problem on GR/HTML and hence git complaints. Fixme!
 ```@example proofShannon2
 using InformationInequalities
-#A="-3I(X;Y|Z)+2H(X) \ge 0"
+#A="-3I(X;Y|Z)+2H(X)  ≥ 0"
 showProof("-3I(X;Y|Z)+2H(X)",Markov(X,Z,Y))
 ```
 

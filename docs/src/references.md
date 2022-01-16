@@ -34,11 +34,11 @@ N.Rethnakar, N S. Diggavi, T. Gläßle, E. Perron, R.Pulikkoonattu, R. Yeung, Y.
 <summary>bibtex</summary>
 ```
 ```
-@book{Yeung2008,
+@book{oxitip2020,
 	address = {},
 	author = {Rethnakar, Nivedita and Diggavi, Suhas and Yeung, Raymond W},
 	edition = {1},
-	title = {{Online X Information Theoretic Inequalities Prover oXitip)}},
+	title = {{Information Theoretic Inequalities Proof Checker oXitip)}},
 	year = {2020},
   url  = {http://www.oxitip.com}
 }

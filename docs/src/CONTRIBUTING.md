@@ -1,6 +1,6 @@
 # InformationInequalities.jl contribution guidelines
 
-First of all, huge thanks for your interest in the package! ✨
+Firstly, many thanks for your interest in the package! ✨
 
 This page has some hopefully useful guidelines. If this is your first time contributing, please read the [pull request-workflow](#Pull-request-workflow) section, mainly to make sure everything works smoothly and you don't get stuck with some nasty technicalities. 
 
