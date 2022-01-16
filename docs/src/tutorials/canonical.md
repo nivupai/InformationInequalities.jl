@@ -23,7 +23,8 @@ Using the functions `PlotIE` or `PlotInformationExpression`, it is easy to visua
 
 ```@example simpletreeEx1
 using InformationInequalities
-using LaTeXStrings;
+using LaTeXStrings
+using Plots
 E="2I(X;Y|Z)+3H(Z)"
 #plotIE(E,nodecolor=:forestgreen)
 plotIE(E,nodecolor=:forestgreen,curves=false,edgecolor=:lightgray,nodeshape=:rect,title=latexstring(LinearInformationExpressionToCanonical(E))); # Hide
