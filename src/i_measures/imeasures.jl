@@ -400,3 +400,44 @@ function find_entropic_vector(n::Int64=3,entropicVector="1h12-1h2")
 	end
     return G[:]
 end
+
+"""
+Γ₂ geometry. This is the simplest case with two random variables (say `X,Y`) forming a geometry in three dimension. The geometric space is spanned by entropy vectors `H(X)`, `H(Y)` and `H(X,Y)`. Γ₂ is a 3D cone in the positive orthant.
+This function is used for visualizing the entropic space in 3D.
+"""
+function GeometryConeGamma2(x,y,z)
+	H=[ 0.0   0   1
+ 		-1   1   1
+  		1  -1   0
+  		0   1   0
+  		1   0  -1]
+	X=(0.0,0.0,0)
+	Y=[]
+	Z=[]
+	p = 0.0
+	idx=1
+	if(-z+y+x ≥0 && z -y ≥ 0 && z -x ≥ 0 && z ≥0 && y≥0 && x ≥ 0)
+		p=1.0
+		
+		idx,X=[X;x]
+		 Y=[Y;y]
+		# Z=[Z;z]
+		# (x,y,z)
+		# Z=push!(Z,z)
+	end
+	if(-z+y+x ≥0)
+		if ( z -y ≥ 0) 
+			if(z -x ≥ 0)
+				if(z ≥0)
+					if (y≥0)
+						if (x ≥ 0)
+							Y=push!(Z,tuple(x,y,z))
+						end
+					end
+				end
+			end
+		end
+	end
+	
+	return Y
+end

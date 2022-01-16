@@ -9,7 +9,16 @@ Canonical representation refers to expressiong information expression as entropi
 * ``H\left(X_i|\textbf{X}_{\mathcal{N} \backslash \{i\}}\right) = H\left(\textbf{X}_{\mathcal{N}}\right)``
 * ``I\left(X_i;X_j|\textbf{X}_{\kappa}\right)= H\left(X_i,\textbf{X}_\kappa\right)+H\left(X_j,\textbf{X}_\kappa\right)-H\left(X_i,X_j,\textbf{X}_\kappa\right)-H\left(\textbf{X}_\kappa\right)``
 
+## Entropic space for ``\Gamma_{2}``
+<p align="center">
+    <img src="docs/src/assets/gamma2gold.png" alt="" width="450"/>
+</p>
 ## Basic concepts
+
+## Entropic space for ``\Gamma_{2}``
+<p align="center">
+    <img src="docs/src/assets/gamma2.png" alt="" width="450"/>
+</p>
 
 Consider the square interval linear system
 

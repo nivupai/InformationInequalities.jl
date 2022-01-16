@@ -37,7 +37,7 @@ export order_entropic_expression
 
 
 export plotEntropyTree
-
+export GeometryConeGamma2
 
 
 
