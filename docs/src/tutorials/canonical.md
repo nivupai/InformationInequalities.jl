@@ -19,6 +19,15 @@ With simplification `simplifyH(A5)` we get
 ![](./../assets/HgraphEx1min.svg)
 
 
+Using the functions `PlotIE` or `PlotInformationExpression`, it is easy to visualize the tree graph of the canonical decomposition.
+
+```@example simpletreeEx1
+usin InformationInequalities
+E="2I(X;Y|Z)+3H(Z)"
+plotIE(E,nodecolor=:forestgreen,curves=false,edgecolor=:lightgray,nodeshape=:rect,title=latexstring(LinearInformationExpressionToCanonical(E))); # Hide
+savefig("gplotEx0")
+```
+![](gplotEx0)
 
 ## Another topic TBD
 For now duplicate and see if it works (FixMe)

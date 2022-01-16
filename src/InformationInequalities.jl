@@ -47,6 +47,7 @@ export find_subset
 export order_entropic1
 export numEIM
 
-
+export PlotInformationExpression
+export plotIE
 
 end

@@ -13,3 +13,33 @@ function plotEntropyTree(S;kwargs...)
 p=plot(Meta.parse(S);kwargs...)
 return p
 end
+
+
+"""
+plotIE(S,...)
+```julia-repl
+julia>PlotIE("H(X,Y)+7H(X1,X2,X3)")
+
+julia>plotIE("I(X;Y)+2I(X;Y|Z)",curves=:false)
+```
+"""
+function PlotIE(S;kwargs...)
+Z= LinearInformationExpressionToCanonical(S)
+p=plot(Meta.parse(Z);kwargs...)
+return p
+end
+
+"""
+PlotInformationExpression(S,...)
+```julia-repl
+julia>PlotInformationExpression("H(X,Y)+7H(X1,X2,X3)")
+
+julia>PlotInformationExpression("I(X;Y)+2I(X;Y|Z)",curves=:false)
+```
+"""
+function PlotInformationExpression(S;kwargs...)
+Z= LinearInformationExpressionToCanonical(S)
+p=plot(Meta.parse(Z);kwargs...)
+return p
+end
+
