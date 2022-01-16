@@ -3,6 +3,21 @@
 ```@contents
 Pages = ["decomposition.md"]
 ```
+
+# Information Measures
+## Entropy
+## Mutual Information
+
+# Information Inequalities
+## Information Constraints
+TBD
+* Markov Chain
+* Independence of random variables
+* Conditional Independence
+* Functional Dependency (Related random variables) ``Y=fun(X)`` 
+A random variable ``Y`` is a mapping from another random variable ``X`` (TBD)
+* TBD
+
 # Elemental Information Inequalities (EIM)
 Information Inequalities which belong to any of the following type:
 * Conditional Entropy of the form ``H\left(X_i|X_{j\ne i}\right)``
