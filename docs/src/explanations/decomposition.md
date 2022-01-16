@@ -10,6 +10,21 @@ TBD
 TBD
 ## Mutual Information
 
+## Basic Information Measures
+TBD
+
+* Conditional Entropy of the form ``H\left(\mathbf{X}_a|\mathbf{X}_{b}\right)``
+* Conditional Mutual Information of the form ``I\left(\mathbf{X}_a;\mathbf{X}_{b\ne i}|\mathbf{X}_c\right)``
+
+where ``a,b,c \subseteq \mathcal{N}_{n}`` and ``a,b \ne \emptyset``.
+
+## Elemental Information Measures
+
+* Conditional Entropy of the form ``H\left(X_i|X_{j\ne i}\right)``
+* Conditional Mutual Information of the form ``I\left(X_i;X_{j\ne i}|\mathbf{X}_\kappa \subseteq \mathcal{N}_{n}\backslash\{i,j\}\right)``
+
+
+
 ## Properties of IM
 Positivity (TBD)
 
@@ -29,7 +44,7 @@ TBD
 A random variable ``Y`` is a mapping from another random variable ``X`` (TBD)
 * TBD
 
-# Elemental Information Inequalities (EIM)
+# Elemental Information Inequalities 
 Information Inequalities which belong to any of the following type:
 * Conditional Entropy of the form ``H\left(X_i|X_{j\ne i}\right)``
 * Conditional Mutual Information of the form ``I\left(X_i;X_{j\ne i}|\mathbf{X}_\kappa \subseteq \mathcal{N}_{n}\backslash\{i,j\}\right)``
