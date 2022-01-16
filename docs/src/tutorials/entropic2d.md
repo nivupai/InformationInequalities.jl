@@ -46,7 +46,7 @@ Pictorial view for `n=6`:
 
 
 Pictorial view for `n=7`:
-```@example EntropicMatrixPlot7
+<!-- ```@example EntropicMatrixPlot7
     using InformationInequalities
     using Plots,LinearAlgebra
     n=7
@@ -55,7 +55,8 @@ Pictorial view for `n=7`:
     heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
     savefig("heatmapH7a.svg") # hide 
 ```
-![](heatmapH7a.svg)
+![](heatmapH7a.svg) -->
+![](../assets/heatmapH7a.svg)
 
 # Singular values of the Entropic Space
 The singular values of the generator matrix follows some structure.
