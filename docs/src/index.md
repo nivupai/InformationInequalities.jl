@@ -4,7 +4,7 @@
 
 ## Overview
 
-This package contains routines to perform numerical linear algebra using interval arithmetic. This can be used both for rigorous computations and uncertainty propagation.
+This package contains routines to perform Information Theoretic measures. The priliminary build up of this tool is to validate, prove and analyze Information Inequalities. This can be used both for rigorous computations and analysis of Information measures and expressions. 
 
 An first overview of the package was given at BLA, the slides are available [here](https://github.com/nivupai/BLA).
 
@@ -18,10 +18,10 @@ An first overview of the package was given at BLA, the slides are available [her
     The package is still under active development and things evolve quickly (or at least should)
 
 - enclosure of the solution of interval linear systems
-- exact characterization of the solution set of interval linear systems using 
-- verified solution of floating point linear systems
-- enclosure of eigenvalues of interval matrices
-- verified computation of eigenvalues and eigenvectors of floating point matrices
+- exact characterization of the entropic space
+- verified proof and ``\LaTeX`` rendering in display
+- enclosure of singularvalues of the entropic space generator matrix
+- Further work
 
 ## Installation
 
@@ -42,17 +42,23 @@ and you are ready to go.
 ## Quickstart
 
 ```julia
-using LinearAlgebra, LazySets, Plots
-
-A = [2..4 -1..1; -1..1 2..4]
-b = [-2..2, -1..1]
-
-Xenclose = solve(A, b)
-polytopes = solve(A, b, LinearOettliPrager())
-
-plot(UnionSetArray(polytopes), ratio=1, label="solution set", legend=:top)
-plot!(IntervalBox(Xenclose), label="enclosure")
+using InformationInequalities
+using Plots
+E="3I(X;Y|Z)+2H(X|Y,Z)"
+A=LinearInformationExpressionToCanonical(UE)
 ```
+``-H(X,Y,Z) + 3 H(X,Z) + H(Y,Z) - 3 H(Z)``.
+
+To plot an Information expression as a tree graph in Entropy co-ordinates,
+```julia
+using InformationInequalities
+using Plots
+E="3I(X;Y|Z)+2H(X|Y,Z)"
+A=plotIE(E)
+```
+![](./docs/src/assets/ex1_gplot.svg)
+
+Another example
 
 ![quickstart-example](assets/quickstart.svg)
 
