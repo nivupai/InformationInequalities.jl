@@ -1,5 +1,5 @@
 
-![](docs/src/assets/logo-text.svg)
+![](docs/src/assets/logo1.svg)
 
 | **Pkg Info** | **Build status** | **Documentation** | **Citation** | **Contributing** |
 |:------------:|:----------------:|:-----------------:|:------------:|:----------------:|
