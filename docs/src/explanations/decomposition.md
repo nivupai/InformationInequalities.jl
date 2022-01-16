@@ -44,6 +44,8 @@ TBD
 A random variable ``Y`` is a mapping from another random variable ``X`` (TBD)
 * TBD
 
+ Constraints can be expressed linear algebraically ``Q\mathfak{h} = 0`` where ``Q`` is the constraint matrix.
+
 # Elemental Information Inequalities 
 Information Inequalities which belong to any of the following type:
 * Conditional Entropy of the form ``H\left(X_i|X_{j\ne i}\right)``
@@ -80,7 +82,7 @@ This is easy to visualize. The built in function `volumeΓ()` can be used to gen
 
 ```@example visualGamma2a
 using InformationInequalities
-plotΓ(n,color=:gold)
+plotΓ(n=2,points=yes,max=3,color=:gold)
 ```
 ![gamma2-space-points](../assets/gamma2gold.png)
 
@@ -108,11 +110,18 @@ which is called *TBD system*. Let us denote by ``A_c`` the *midpoint matrix* of 
 
 
 # Shannon Type Inequalities
-# Non Shannon Type Inequalities
 TBD
 An Information inequality of the form ``f=\mathbf{b}^{\top} \mathfrak{h} \ge 0``, we just need to check
 ``\min_{\mathfrak{h}:G\mathfrak{h} \ge 0} \mathbf{b}^{\top} \mathfrak{h} = 0``
-These are effectively encapsulated to the following optimization problem.
+These are effectively encapsulated to the following optimization problem. This can now be solved using Linear Programming techniques (TBD)
+
+The constrained Information Inequality ``f=\mathbf{b}^{\top} \mathfrak{h} \ge 0`` with constraint ``Q \mathfrak{h} =0`` can be similarly treated under the optimization framework as,
+
+``\underset{\min_{\mathfrak{h}:G\mathfrak{h} \ge 0}}{Q\mathfrak{h}=0} \mathbf{b}^{\top} \mathfrak{h} = 0``
+
+
+# Non Shannon Type Inequalities
+
 
 ### Improve numerical stability
 
