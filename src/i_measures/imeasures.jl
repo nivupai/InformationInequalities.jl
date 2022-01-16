@@ -245,7 +245,7 @@ function unique_entropy_vector(n::Int64=3)
 end
 
 
-function find_entropic_vector(n::Int64=3,entropicVector="1h12-1h2")
+function find_entropic_vectorInt(n::Int64=3,entropicVector="1h12-1h2")
 	# vv=toy_entropic_matrix(n)[5]
 	x= entropicVector * "+"
 		listE=unique_entropy_vector(n)[3]
@@ -443,8 +443,7 @@ function GeometryConeGamma2(x,y,z)
 end
 
 """
-Set of discrete points in ``\Gamma_{2}`` confined within a hypercube
- 
+Set of discrete points in ``\Gamma_{2}`` confined within a hypercube 
 """
 function elementsGamma2(;rmin::Float64=0.0,rmax::Float64=1.0,rstep::Float64 = 0.1)
 	x = rmin:rstep:rmax
