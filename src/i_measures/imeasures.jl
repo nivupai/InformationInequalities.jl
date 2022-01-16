@@ -199,7 +199,7 @@ end
 
 
 """
-	linearIEexpr2Can(A)
+LinearInformationExpressionToCanonical(A)
 ```julia-repl
 julia>LinearInformationExpressionToCanonical("I(X;Y|Z)-2.3H(U,V)-2H(u)")
 "1H(X,Z)+1H(Y,Z)-1H(X,Y,Z)-1H(Z)-2.3H(U,V)-2H(u)"

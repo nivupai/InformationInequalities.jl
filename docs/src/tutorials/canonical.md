@@ -6,12 +6,16 @@ For the Information Expression ``2H(X1,X2|X3)+I(X1;X2|X3)+2H(X1,X3)+2I(X;Y)``, t
 
 ```@example entropicHex1
 SE="2H(X1,X2|X3)+I(X1;X2|X3)+2H(X1,X3)+2I(X;Y)"
-A5=linearIEexpr2Can(SE)
+A5=LinearInformationExpressionToCanonical(SE)
 #plotEntropyTree(A5,curves=false,nodecolor=:skyblue,edgecolor=:gray,nodesize=0.13,nodeshape=:rect,titlefontsize=10,title=latexstring(replace((A5),"*"=>""," "=>"")))
 #savefig("gPlotHex1.svg") # hide
 ```
 
-![](./../HgraphEx1min.svg)
+![](./../assets/HgraphEx1.svg)
+
+
+With simplification `simplifyH(A5)` we get
+![](./../assets/HgraphEx1min.svg)
 
 
 
