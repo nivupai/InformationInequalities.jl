@@ -15,7 +15,7 @@ Pictorial view for `n=3`:
     n=3
     G,K,L=find_matrixG(n)
     heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
-    savefig("heatmapH3a.svg") # hide 
+    savefig("heatmapH3a.svg"); # hide 
 ```
 ![](heatmapH3a.svg)
 
@@ -28,7 +28,7 @@ Pictorial view for `n=4`:
     G,K,L=find_matrixG(n)
     #heatmap(transpose(G),aspectratio=1,color=:viridis)
     heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
-    savefig("heatmapH4a.svg") # hide 
+    savefig("heatmapH4a.svg"); # hide 
 ```
 ![](heatmapH4a.svg)
 
@@ -40,7 +40,7 @@ Pictorial view for `n=6`:
     G,K,L=find_matrixG(n)
     #heatmap(transpose(G),aspectratio=1,color=:viridis)
     heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
-    savefig("heatmapH6a.svg") # hide 
+    savefig("heatmapH6a.svg"); # hide 
 ```
 ![](heatmapH6a.svg)
 
@@ -61,7 +61,7 @@ using Plots
     scatter!(svdvals(find_matrixG(4)[1]),label="Γ4")
     scatter!(svdvals(find_matrixG(5)[1]),label="Γ5")
     ylabel!("λ")
-savefig("eigsEntropic.svg") # hide
+savefig("eigsEntropic.svg"); # hide
 ```
 ![](eigsEntropic.svg)
 
