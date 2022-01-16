@@ -1,5 +1,20 @@
 # Eigenvalue computations
 
+
+For the Information Expression ``2H(X1,X2|X3)+I(X1;X2|X3)+2H(X1,X3)+2I(X;Y)``, the canonical representation is ``-2H(X,Y)+2H(X)+H(X1,X2,X3)+3H(X1,X3)+H(X2,X3)-3H(X3)+2H(Y)``.
+
+
+```@example entropicHex1
+SE="2H(X1,X2|X3)+I(X1;X2|X3)+2H(X1,X3)+2I(X;Y)"
+A5=linearIEexpr2Can(SE)
+#plotEntropyTree(A5,curves=false,nodecolor=:skyblue,edgecolor=:gray,nodesize=0.13,nodeshape=:rect,titlefontsize=10,title=latexstring(replace((A5),"*"=>""," "=>"")))
+#savefig("gPlotHex1.svg") # hide
+```
+
+![](./../HgraphEx1min.svg)
+
+
+
 ## Another topic TBD
 For now duplicate and see if it works (FixMe)
 
