@@ -107,8 +107,16 @@ which is called *TBD system*. Let us denote by ``A_c`` the *midpoint matrix* of 
 - Inverse diagonal TBD: ``C\approx D_{A_c}^{-1}`` where ``D_{A_c}`` is the diagonal matrix containing the main diagonal of ``A_c``.
 
 
-
+# Shannon Type Inequalities
+# Non Shannon Type Inequalities
+TBD
+An Information inequality of the form ``f=\mathbf{b}^{\top} \mathfrak{h} \ge 0``, we just need to check
+``\min_{\mathfrak{h}:G\mathfrak{h} \ge 0} \mathbf{b}^{\top} \mathfrak{h} = 0``
+These are effectively encapsulated to the following optimization problem.
 
 ### Improve numerical stability
 
 Even if the algorithms theoretically work
+
+TBD: The search space is still double exponential without exploiting any sparsity structure which seems to exisit (TBD).
+![gamma2-space-points](../assets/oxitip_complexity.svg)
