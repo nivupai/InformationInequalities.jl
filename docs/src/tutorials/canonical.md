@@ -27,9 +27,9 @@ using LaTeXStrings;
 E="2I(X;Y|Z)+3H(Z)"
 #plotIE(E,nodecolor=:forestgreen)
 plotIE(E,nodecolor=:forestgreen,curves=false,edgecolor=:lightgray,nodeshape=:rect,title=latexstring(LinearInformationExpressionToCanonical(E))); # Hide
-savefig("gplotEx0");
+savefig("gplotEx0.svg");
 ```
-![](gplotEx0)
+![](gplotEx0.svg)
 
 ## Another topic TBD
 For now duplicate and see if it works (FixMe)
