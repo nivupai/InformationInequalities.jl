@@ -450,7 +450,7 @@ function elementsGamma2(;rmin::Float64=0.0,rmax::Float64=1.0,rstep::Float64 = 0.
 	x = rmin:rstep:rmax
     y = rmin:rstep:rmax
     z = rmin:rstep:rmax
-	vol = [entropic_points(ix,iy,iz,H) for ix in x, iy in y, iz in z]
+	vol = [GeometryConeGamma2(ix,iy,iz) for ix in x, iy in y, iz in z]
 	U=vol[findall( x -> x != [], vol )]
 	V=hcat(U...)
 	W=hcat(collect.(V)...)
