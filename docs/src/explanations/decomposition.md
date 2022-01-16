@@ -3,6 +3,14 @@
 ```@contents
 Pages = ["decomposition.md"]
 ```
+# Elemental Information Inequalities (EIM)
+Information Inequalities which belong to any of the following type:
+* Conditional Entropy of the form ``H\left(X_i|X_{j\ne i}\right)``
+* Conditional Mutual Information of the form ``I\left(X_i;X_{j\ne i}|\mathbf{X}_\kappa \subseteq \mathcal{N}_{n}\backslash\{i,j\}\right)``
+
+are called Elemental Information Inequalities (EIM). These are entropies of a single random variable or and conditional entropies of a single random variable, conditioned on other random variable or sets of random variables.
+"
+
 
 # Canonical Represenation
 Canonical representation refers to expressiong information expression as entropies and joint entropies. e.g., ``H(X1,X2,...,X_n)``. Elemental expressions can be decomposed to canonical form as follows:

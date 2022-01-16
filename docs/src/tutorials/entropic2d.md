@@ -33,7 +33,7 @@ Pictorial view for `n=4`:
 ![](heatmapH4a.svg)
 
 Pictorial view for `n=6`:
-```@example EntropicMatrixPlot8
+```@example EntropicMatrixPlot6
     using InformationInequalities
     using Plots,LinearAlgebra
     n=6
@@ -43,6 +43,19 @@ Pictorial view for `n=6`:
     savefig("heatmapH6a.svg") # hide 
 ```
 ![](heatmapH6a.svg)
+
+
+Pictorial view for `n=7`:
+```@example EntropicMatrixPlot7
+    using InformationInequalities
+    using Plots,LinearAlgebra
+    n=7
+    G,K,L=find_matrixG(n)
+    #heatmap(transpose(G),aspectratio=1,color=:viridis)
+    heatmap(transpose(G),xaxis=nothing,yaxis=nothing,legend=nothing,color=:viridis)
+    savefig("heatmapH7a.svg") # hide 
+```
+![](heatmapH7a.svg)
 
 # Singular values of the Entropic Space
 The singular values of the generator matrix follows some structure.
@@ -59,6 +72,16 @@ using Plots
 savefig("eigsEntropic.svg") # hide
 ```
 ![](eigsEntropic.svg)
+
+
+Interesting thing to notice is among the ``2^n-n`` singular values of the generator matrix  of ``Lambda_{n}``, ``n`` are inheited from ``Lambda_{n-1}``. The new  eigenvalue is ``n\sqrt{2}``.
+
+```@example eigsSqrt2
+using LinearAlgebra;
+using InformationInequalities
+[n*√2 for n=1:10]
+```
+
 
 ## Eigenvalues of interval matrices
 
