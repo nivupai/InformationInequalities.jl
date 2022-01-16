@@ -122,6 +122,21 @@ The constrained Information Inequality ``f=\mathbf{b}^{\top} \mathfrak{h} \ge 0`
 
 # Non Shannon Type Inequalities
 
+# Linear Programming and Duality principles
+## Strong duality 
+# Generating proofs for Shannon Type Inequalities
+Lagrange formulation
+TBD
+
+## Example of a proof generation
+**Note**: The showProof has a rendering display problem on GR/HTML and hence git complaints. Fixme!
+```@example proofShannon2
+using InformationInequalities
+#A="-3I(X;Y|Z)+2H(X) \ge 0"
+showProof("-3I(X;Y|Z)+2H(X)",Markov(X,Z,Y))
+```
+
+
 
 ### Improve numerical stability
 
