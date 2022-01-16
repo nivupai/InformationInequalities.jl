@@ -25,7 +25,7 @@ Using the functions `PlotIE` or `PlotInformationExpression`, it is easy to visua
 using InformationInequalities
 using LaTeXStrings;
 E="2I(X;Y|Z)+3H(Z)"
-plotIE(E,nodecolor=:forestgreen)
+#plotIE(E,nodecolor=:forestgreen)
 plotIE(E,nodecolor=:forestgreen,curves=false,edgecolor=:lightgray,nodeshape=:rect,title=latexstring(LinearInformationExpressionToCanonical(E))); # Hide
 savefig("gplotEx0");
 ```
