@@ -23,7 +23,7 @@ julia>PlotIE("H(X,Y)+7H(X1,X2,X3)")
 julia>plotIE("I(X;Y)+2I(X;Y|Z)",curves=:false)
 ```
 """
-function PlotIE(S;kwargs...)
+function plotIE(S;kwargs...)
 Z= LinearInformationExpressionToCanonical(S)
 p=plot(Meta.parse(Z);kwargs...)
 return p
@@ -37,7 +37,7 @@ julia>PlotInformationExpression("H(X,Y)+7H(X1,X2,X3)")
 julia>PlotInformationExpression("I(X;Y)+2I(X;Y|Z)",curves=:false)
 ```
 """
-function PlotInformationExpression(S;kwargs...)
+function plotInformationExpression(S;kwargs...)
 Z= LinearInformationExpressionToCanonical(S)
 p=plot(Meta.parse(Z);kwargs...)
 return p
