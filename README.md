@@ -66,22 +66,21 @@ The package was also presented at BLA! The theoretical basis for this work is de
 Here is a quick demo about solving an interval linear system.
 
 ```julia
-using InformationInequalities, LazySets, Plots
-
-A = [2..4 -1..1;-1..1 2..4]
-b = [-2..2, -1..1]
-
-Xenclose = solve(A, b)
-x=-2:0.1:2
-plot(x,sin.(x))
-savefig()
-
-plot(UnionSetArray(polytopes), ratio=1, label="solution set", legend=:top)
-plot!(IntervalBox(Xenclose), label="enclosure")
+using InformationInequalities
+using Plots
+E="3I(X;Y|Z)+2H(X|Y,Z)"
+A=LinearInformationExpressionToCanonical(UE)
 ```
-<p align="center">
-    <img src="docs/src/assets/quickstart.png" alt="IntervalMatrices.jl" width="450"/>
-</p>
+``-H(X,Y,Z) + 3 H(X,Z) + H(Y,Z) - 3 H(Z)``.
+
+To plot an Information expression as a tree graph in Entropy co-ordinates,
+```julia
+using InformationInequalities
+using Plots
+E="3I(X;Y|Z)+2H(X|Y,Z)"
+A=plotIE(E)
+```
+![](./docs/src/assets/ex1_gplot.svg)
 
 ## Contributing
 
