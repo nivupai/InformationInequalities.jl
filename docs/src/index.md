@@ -1,4 +1,4 @@
-![](assets/gamma2gold.png)
+![](./assets/gamma2gold.png)
 
 ![version](https://img.shields.io/github/v/release/juliaintervals/InformationInequalities.jl)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/lucaferranti/IntervalLinearAlgebra.jl/blob/main/LICENSE)[![Build Status](https://github.com/nivupai/InformationInequalities.jl/workflows/CI/badge.svg)](https://github.com/nivupai/InformationInequalities.jl/actions)[![Coverage](https://codecov.io/gh/nivupai/InformationInequalities.jl/branch/main/graph/badge.svg?token=mgCzKMPiwK)](https://codecov.io/gh/nivupai/InformationInequalities.jl)[![bibtex citation](https://img.shields.io/badge/bibtex-citation-green)](#Citation)[![zenodo doi](https://img.shields.io/badge/zenodo-DOI-blue)](https://doi.org/10.5282/zenodo.5363564)
 
