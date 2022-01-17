@@ -31,7 +31,7 @@ url    = {https://github.com/nivupai/InformationInequalities.jl}
 
 **Note**: The package is still under active development and things evolve quickly (or at least should)
 
-- enclosure of the solution of interval linear systems
+- enclosure of the solution 
 - exact characterization of the entropic space
 - verified proof and ``\LaTeX`` rendering in display
 - enclosure of singularvalues of the entropic space generator matrix
@@ -63,7 +63,7 @@ The package was also presented at BLA! The theoretical basis for this work is de
 
 ## Quickstart
 
-Here is a quick demo about solving an interval linear system.
+Here is a quick demo example from one of the InformationInequalities function. This shows the canonical decomposition and computational tree.
 
 ```julia
 using InformationInequalities
@@ -103,27 +103,26 @@ See also the complete list of [references](https://nivupai.github.io/Information
 
 ## Related packages
 
-- [IntervalArithmetic.jl](https://github.com/juliaintervals/IntervalArithmetic.jl) -- Interval computations in Julia
-- [IntervalMatrices.jl](https://github.com/JuliaReach/IntervalMatrices.jl) -- Matrices with interval coefficients in Julia.
+- TBD
 
 ## Acknowledgment
 
 The development of this package started during TBD.
 
-[ver-img]: https://img.shields.io/github/v/release/juliaintervals/IntervalLinearAlgebra.jl
+[ver-img]: https://img.shields.io/github/v/release/nivupai/InformationInequalities.jl
 [mit-img]: https://img.shields.io/badge/license-MIT-yellow.svg
 
-[ci-img]: https://github.com/juliaintervals/IntervalLinearAlgebra.jl/workflows/CI/badge.svg
-[ci-url]: https://github.com/juliaintervals/IntervalLinearAlgebra.jl/actions
+[ci-img]: https://github.com/nivupai/InformationInequalities.jl/workflows/CI/badge.svg
+[ci-url]: https://github.com/nivupai/InformationInequalities.jl/actions
 
-[cov-img]: https://codecov.io/gh/juliaintervals/IntervalLinearAlgebra.jl/branch/main/graph/badge.svg?token=mgCzKMPiwK
-[cov-url]: https://codecov.io/gh/juliaintervals/IntervalLinearAlgebra.jl
+[cov-img]: https://codecov.io/gh/nivupai/InformationInequalities.jl/branch/main/graph/badge.svg?token=mgCzKMPiwK
+[cov-url]: https://codecov.io/gh/nivupai/InformationInequalities.jl
 
 [stable-img]: https://img.shields.io/badge/docs-stable-blue.svg
-[stable-url]: https://juliaintervals.github.io/IntervalLinearAlgebra.jl/stable
+[stable-url]: https://nivupai.github.io/InformationInequalities.jl/stable
 
 [dev-img]: https://img.shields.io/badge/docs-dev-blue.svg
-[dev-url]: https://juliaintervals.github.io/IntervalLinearAlgebra.jl/dev
+[dev-url]: https://nivupai.github.io/InformationInequalities.jl/dev
 
 [bib-img]: https://img.shields.io/badge/bibtex-citation-green
 [bib-url]: ./CITATION.bib
@@ -132,7 +131,7 @@ The development of this package started during TBD.
 [doi-url]: https://doi.org/10.5281/zenodo.5363563
 
 [contrib-img]: https://img.shields.io/badge/contributing-guidelines-orange
-[contrib-url]: https://juliaintervals.github.io/IntervalLinearAlgebra.jl/stable/CONTRIBUTING/
+[contrib-url]: https://nivupai.github.io/InformationInequalities.jl/stable/CONTRIBUTING/
 
 [style-img]: https://img.shields.io/badge/code%20style-blue-4495d1.svg
 [style-url]: https://github.com/invenia/BlueStyle
