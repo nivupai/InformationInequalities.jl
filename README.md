@@ -23,7 +23,7 @@ title  = {InformationInequalities.jl: Exploring Information Theoretic Inequaliti
 month  = {1},
 year   = {2022},
 doi    = {10.5282/zenodo.5363564},
-url    = {https://github.com/juliaintervals/InformationInequalities.jl}
+url    = {https://github.com/nivupai/InformationInequalities.jl}
 }
 ```
 
