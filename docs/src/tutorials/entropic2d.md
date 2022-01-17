@@ -75,14 +75,14 @@ using InformationInequalities
 ```
 
 !!! note
-    A fascinating thing here is that, for a given ``n`` the number of random variables, the entropy space ``Gamma_{n}``, the singular values of the generating matrix ``G`` are such that ``n`` of them are distinct from those of ``Gamma_{n-1}`` but the rest (overwhleming majority that) are integer multiples of ``\sqrt{2}``.
+    A fascinating thing here is that, for a given ``n`` the number of random variables, the entropy space ``\Gamma_{n}``, the singular values of the generating matrix ``G`` are such that ``n`` of them are distinct from those of ``\Gamma_{n-1}`` but the rest (overwhleming majority that) are integer multiples of ``\sqrt{2}``.
 
 ## Eigenvalues 
 
 
 
 !!! note
-    At the moment, `singularG` is not rigorous, that is the computations for the non-interval eigenvalue problem solved internally are carried out using normal non-verified floating point computations. Julia internally has slight difference in floating point precision for some of the singular values when ``\sqrt{2}`` and its multiples are evaluated. TBD
+    At the moment, `ShannonMatrix` is not rigorous, that is the computations for the non-interval eigenvalue problem solved internally are carried out using normal non-verified floating point computations. Julia internally has slight difference in floating point precision for some of the singular values when ``\sqrt{2}`` and its multiples are evaluated. TBD
 
 To demonstrate the functionality, let us consider the following interval matrix
 
