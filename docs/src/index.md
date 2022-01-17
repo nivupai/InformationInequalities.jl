@@ -56,7 +56,7 @@ using Plots
 E="3I(X;Y|Z)+2H(X|Y,Z)"
 A=plotIE(E)
 ```
-![](./docs/src/assets/ex1_gplot.svg)
+![](./assets/ex1_gplot.svg)
 
 Another example
 
