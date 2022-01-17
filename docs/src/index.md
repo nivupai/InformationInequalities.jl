@@ -45,7 +45,7 @@ and you are ready to go.
 using InformationInequalities
 using Plots
 E="3I(X;Y|Z)+2H(X|Y,Z)"
-A=LinearInformationExpressionToCanonical(UE)
+A=LinearInformationExpressionToCanonical(E)
 ```
 ``-H(X,Y,Z) + 3 H(X,Z) + H(Y,Z) - 3 H(Z)``.
 
@@ -60,7 +60,7 @@ A=plotIE(E)
 
 Another example TBD
 
-![quickstart-example](assets/quickstart.svg)
+
 
 ## Citation
 

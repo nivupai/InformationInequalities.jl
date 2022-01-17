@@ -69,7 +69,7 @@ Here is a quick demo about solving an interval linear system.
 using InformationInequalities
 using Plots
 E="3I(X;Y|Z)+2H(X|Y,Z)"
-A=LinearInformationExpressionToCanonical(UE)
+A=LinearInformationExpressionToCanonical(E)
 ```
 ``-H(X,Y,Z) + 3 H(X,Z) + H(Y,Z) - 3 H(Z)``.
 
