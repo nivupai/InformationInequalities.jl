@@ -50,4 +50,10 @@ export numEIM
 export plotInformationExpression
 export plotIE
 
+
+export simplify
+export simplifyH
+export entropic_terms
+export minimalE
+
 end
