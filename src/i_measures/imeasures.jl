@@ -456,3 +456,115 @@ function elementsGamma2(;rmin::Float64=0.0,rmax::Float64=1.0,rstep::Float64 = 0.
 	return W
 end
 
+"""
+    E,UE,V,λ =entropic_terms(S::AbstractString)
+
+Find the additive entropic terms in the canonical expression. This function is internally used in `simplifyH(S::AbstractString)`.
+#### Arguments
+- S  = Any linear Information Expression. These are linear combination of ``I(X_1,...X_k;Y_1,..Y_l|Z_1,...Z_n)`` and ``H(X_1,X_2,...X_m|Z_1,..Z_n)``
+#### Output
+- E  = Constituent Information measures in S
+- U = The distinct (unique) elements from E
+- V = The individual elements of S 
+- λ = The scaling coefficients of U (i.e., ``V=λ^T E``)
+
+
+#### Examples
+```julia-repl
+julia> S="I(X;Y)-H(X,Y|Z)-3H(X,Y)+2I(X;Y)"
+julia> E,UE,V,λ=entropic_terms(S) 
+["I(X;Y)" "H(X,Y|Z)" "H(X,Y)" "I(X;Y)"],
+["I(X;Y)" "H(X,Y|Z)" "H(X,Y)"],
+["1I(X;Y)" "-1H(X,Y|Z)" "-3H(X,Y)" "2I(X;Y)"],
+[1.0 -1.0 -3.0 2.0]
+```
+"""
+function entropic_terms(S::AbstractString)
+	A0= "+" * S
+	A1= replace(A0,"+H"=>"+1H","-H"=>"-1H")
+	A2= replace(A1,"+I"=>"+1I")
+	A2a= replace(A2,"-I"=>"-1I")
+	A2b= replace(A2a,"-"=>"+-")
+	A3=replace(A2b,"++"=>"+")
+	A4=split(A3,"+")
+	V=A4[2:end]
+
+	E=[match(r"([H|I]?\(.*)",i).captures[1] for i in V]
+	λ=parse.(Float64,[match(r"([-|+]*\d*[.]?(\d*)?)",i).captures[1] for i in V])
+	UE=unique(E)
+	
+	return E,UE,V,λ	
+end
+
+
+
+"""
+    C=minimalE(V,U,λ)
+
+This function is internally used in `simplifyH(S::AbstractString)`.
+### Arguments
+- ``E``  = Constituent Information measures in ``S``
+- ``U`` = The distinct (unique) elements from ``E``
+- ``V`` = The individual elements of ``S`` 
+- ``λ`` = The scaling coefficients of ``U`` (i.e., ``V=λ^T E``)
+
+### Output
+- C = Simplified Information Expression as a linear combination of ``U``
+
+#### Examples
+```julia-repl
+julia> S="7H(X,Y|Z1,Z2)+2H(X,Y)-4H(X,Y)+H(Z)-3H(X,Y|Z1,Z2)"
+julia> E,U,V,λ=entropic_terms(S) 
+julia> Z= minimalE(V,U,λ)
+"+4.0H(X,Y|Z1,Z2)-2.0H(X,Y)+H(Z)"
+```
+"""
+function minimalE(V,UE,λ)
+	Z=""
+	for u in UE
+		Λ0=sum(λ[occursin.(u, V)])
+		Λ = round(Λ0,digits=3)
+		if Λ ≠ 0
+			Y="+" * string(Λ) * u
+		else
+			Y="" 
+		end
+		Z=Z*Y
+	end
+	P=replace(Z," "=>"","+-"=>"-","++"=>"+")
+	C=replace(P,"-1.0H"=>"-H","+1.0H"=>"+H","-1.0I"=>"-I","+1.0I"=>"+I")
+	return C
+end
+
+
+
+"""
+Express an Information Expression in the simplest form (algebraically).
+#### Examples
+```julia-repl
+julia> simplify("I(X;Y)-H(X,Y|Z)-3H(X,Y)+2I(X;Y)")
+"+3.0I(X;Y)-H(X,Y|Z)-3.0H(X,Y)"
+
+julia> simplify("3I(X;Y|Z)-H(X,Y|Z)-3I(X;Y|Z)-3H(X,Y|Z)+H(X1,X2)")
+"-4.0H(X,Y|Z)+H(X1,X2)"
+```
+"""
+function simplify(S)
+	E,UE,V,λ =	entropic_terms(S)
+	M=minimalE(V,UE,λ)
+	return M
+end
+
+
+"""
+Express an Information Expression in the simplest form (algebraically). This is used in conjunction with the canonical expression.
+#### Examples
+```julia-repl
+julia> 
+```
+"""
+function simplifyH(S)
+	E,UE,V,λ =	entropic_terms(S)
+	M=minimalE(V,UE,λ)
+	return M
+end
