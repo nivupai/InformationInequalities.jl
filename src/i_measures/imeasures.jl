@@ -568,3 +568,5 @@ function simplifyH(S)
 	M=minimalE(V,UE,λ)
 	return M
 end
+
+
