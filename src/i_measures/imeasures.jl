@@ -200,6 +200,14 @@ end
 function InformationMeasureToCanonical(S::AbstractString="-2.32I(X;Y|Z1,Z2)")
 	# Do check and pick only one Iexpr H() or I() with scaling
     F=replace(S," "=>"")
+	# Return an error if there are more than one IMeasures
+	F1=replace(F,"-"=>"+-")
+	F2= split(F1,"+")
+	F3 = filter(!isempty, F2)
+	if(length(F3)>1)
+		error("A single Information Meausure expected; I(X...;Y...|Z...) or H(X,Y...|U,V...)")
+	end
+	
 	 kk=match(r"(^[+|-]?[H|I][(])",F)  #Check if starts with bare ±I() or ±H(
 	if kk != nothing # starts with bare I() or H(
 		sExpr=replace(string(F),"-I("=>"I(","-H("=>"H(","+I("=>"I(","+H("=>"H(")
