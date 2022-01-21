@@ -186,7 +186,7 @@ function InformationExpressionToCanonical(F::AbstractString="-2.32I(X;Y|Z1,Z2)")
 
 	sExpr=string(Mexp.captures[1])
 	sCoef=string(Mcoef.captures[1])
-	scalar=parse(Float64,sCoef)
+	# scalar=parse(Float64,sCoef)
 	end
 	CanExpr=Elemental2Canonical(sExpr)
 	Z0=replace(CanExpr,"H(" =>sCoef *"H(")
@@ -196,6 +196,41 @@ function InformationExpressionToCanonical(F::AbstractString="-2.32I(X;Y|Z1,Z2)")
 	
 	return Z
 end
+
+function InformationMeasureToCanonical(S::AbstractString="-2.32I(X;Y|Z1,Z2)")
+	# Do check and pick only one Iexpr H() or I() with scaling
+    F=replace(S," "=>"")
+	 kk=match(r"(^[+|-]?[H|I][(])",F)  #Check if starts with bare ±I() or ±H(
+	if kk != nothing # starts with bare I() or H(
+		sExpr=replace(string(F),"-I("=>"I(","-H("=>"H(","+I("=>"I(","+H("=>"H(")
+		# sCoef="1"
+		# kk.match[1]
+		ρ = (kk.match[1]=='-') ? -1 : 1		
+		sCoef = string(ρ)
+		 # Elemental2Canonical(sExpr)
+		# @show sCoef=(kk.match[1]=='-') ? "-1" : "1"
+	else
+	
+		strIH=r"([H|I]+\([\w](.)*[\)])"
+		strN=r"([-|+]?[\d]*[\. | \/]?[\d ?]*)"
+		Mexp=match(strIH,F)
+		@show Mcoef=match(strN,F)
+
+		sExpr=string(Mexp.captures[1])
+		@show sCoef=string(Mcoef.captures[1])
+		# @show parse(Float64,sCoef)
+		# @show scalar=parse(Float64,sCoef)
+	end
+	CanExpr=Elemental2Canonical(sExpr)
+	Z0=replace(CanExpr,"H(" =>sCoef *"H(")
+	Z1=replace(Z0,"--"=>"+")
+	Z2=replace(Z1,"+-"=>"-")
+	Z3=replace(Z2,"-+"=>"-")
+	Z4= replace(Z3," "=>"")
+	Z=replace(Z4,"++"=>"+")
+	return Z
+end
+
 
 
 """

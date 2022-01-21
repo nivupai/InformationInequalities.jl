@@ -21,6 +21,7 @@ export Elemental2Canonical
 export Elemental2Canonical_H
 export Elemental2Canonical_MI
 export InformationExpressionToCanonical
+export InformationMeasureToCanonical
 export LinearInformationExpressionToCanonical
 
 export entropic_matrix
