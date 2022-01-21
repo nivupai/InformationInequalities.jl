@@ -240,7 +240,7 @@ julia>LinearInformationExpressionToCanonical("I(X;Y|Z)-2.3H(U,V)-2H(u)")
 "1H(X,Z)+1H(Y,Z)-1H(X,Y,Z)-1H(Z)-2.3H(U,V)-2H(u)"
 ```
 """
-function LinearInformationExpressionToCanonical1(A)
+function LinearInformationExpressionToCanonical(A)
     A1=replace(A,"-"=>"+-","+I("=>"+1I(","-I("=>"+-1I(","+H("=>"+1H(","-H("=>"+-1H(")
     @show  A1a =replace(A1," "=>"")
     @show A2=split.(A1a,"+")
