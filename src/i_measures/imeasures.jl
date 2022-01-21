@@ -214,10 +214,10 @@ function InformationMeasureToCanonical(S::AbstractString="-2.32I(X;Y|Z1,Z2)")
 		strIH=r"([H|I]+\([\w](.)*[\)])"
 		strN=r"([-|+]?[\d]*[\. | \/]?[\d ?]*)"
 		Mexp=match(strIH,F)
-		@show Mcoef=match(strN,F)
+		Mcoef=match(strN,F)
 
 		sExpr=string(Mexp.captures[1])
-		@show sCoef=string(Mcoef.captures[1])
+		sCoef=string(Mcoef.captures[1])
 		# @show parse(Float64,sCoef)
 		# @show scalar=parse(Float64,sCoef)
 	end
@@ -243,7 +243,8 @@ julia>LinearInformationExpressionToCanonical("I(X;Y|Z)-2.3H(U,V)-2H(u)")
 function LinearInformationExpressionToCanonical(A)
     A1=replace(A,"-"=>"+-","+I("=>"+1I(","-I("=>"+-1I(","+H("=>"+1H(","-H("=>"+-1H(")
     A2=split.(A1,"+")
-    A3=InformationExpressionToCanonical.(A2)
+    # A3=InformationExpressionToCanonical.(A2)
+	A3=InformationMeasureToCanonical.(A2)
 	# A4=prod(A3) 
 	A4=""
 	for ii=1:length(A3)
