@@ -240,11 +240,13 @@ julia>LinearInformationExpressionToCanonical("I(X;Y|Z)-2.3H(U,V)-2H(u)")
 "1H(X,Z)+1H(Y,Z)-1H(X,Y,Z)-1H(Z)-2.3H(U,V)-2H(u)"
 ```
 """
-function LinearInformationExpressionToCanonical(A)
+function LinearInformationExpressionToCanonical1(A)
     A1=replace(A,"-"=>"+-","+I("=>"+1I(","-I("=>"+-1I(","+H("=>"+1H(","-H("=>"+-1H(")
-    A2=split.(A1,"+")
+    @show  A1a =replace(A1," "=>"")
+    @show A2=split.(A1a,"+")
+	@show A2a = filter(!isempty, A2)
     # A3=InformationExpressionToCanonical.(A2)
-	A3=InformationMeasureToCanonical.(A2)
+	A3=InformationMeasureToCanonical.(A2a)
 	# A4=prod(A3) 
 	A4=""
 	for ii=1:length(A3)
@@ -253,8 +255,6 @@ function LinearInformationExpressionToCanonical(A)
 	A5=replace(A4,"+-"=>"-")
 	return A5
 end
-
-
 
 """
 For a given number `n` of random variables, list down all the elemental information measures and their corresponding entropic decompositions. The entropic vectors are identified with the prefix `h` and follows lexicographic mapping. e.g., `H(X1,X3,X7)=h137`. Note that, for now this lexicographic mapping works only for `n < 10`.  
