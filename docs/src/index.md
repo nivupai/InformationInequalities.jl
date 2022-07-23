@@ -4,7 +4,7 @@
 
 ## Overview
 
-This package contains routines to perform Information Theoretic measures. The priliminary build up of this tool is to validate, prove and analyze Information Inequalities. This can be used both for rigorous computations and analysis of Information measures and expressions. 
+This package contains routines to perform Information Theoretic measures. The preliminary build up of this tool is to validate, prove and analyze Information Inequalities. This can be used both for rigorous computations and analysis of Information measures and expressions. 
 
 An first overview of the package was given at BLA, the slides are available [here](https://github.com/nivupai/BLA).
 
